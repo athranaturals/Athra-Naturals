@@ -9,8 +9,8 @@
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 :root{
-  --black:#080807;
-  --dark:#0f0f0d;
+  --black:#222220;
+  --dark:#2a2a26;
   --gold:#c9a84c;
   --gold2:#e8cb7a;
   --green:#1a3a2a;
@@ -35,7 +35,7 @@ nav.solid{background:rgba(8,8,7,.97);border-bottom:1px solid rgba(201,168,76,.15
 .hbg span{display:block;width:22px;height:1px;background:var(--cream);transition:.3s}
 
 /* MOB MENU */
-.mob{display:none;position:fixed;inset:0;background:rgba(8,8,7,.98);z-index:998;flex-direction:column;align-items:center;justify-content:center;gap:2.5rem}
+.mob{display:none;position:fixed;inset:0;background:rgba(34,34,32,.98);z-index:998;flex-direction:column;align-items:center;justify-content:center;gap:2.5rem}
 .mob.on{display:flex}
 .mob a{font-family:'Playfair Display',serif;font-size:2.2rem;color:var(--cream);text-decoration:none;transition:color .3s}
 .mob a:hover{color:var(--gold)}
@@ -43,7 +43,7 @@ nav.solid{background:rgba(8,8,7,.97);border-bottom:1px solid rgba(201,168,76,.15
 
 /* HERO */
 #hero{position:relative;height:100vh;min-height:620px;display:flex;align-items:center;overflow:hidden}
-.hero-bg{position:absolute;inset:0;background:linear-gradient(120deg,#080807 0%,#0e1a13 55%,#080807 100%)}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(120deg,#222220 0%,#1e2e24 55%,#222220 100%)}
 .hero-glow{position:absolute;top:20%;right:5%;width:55%;height:70%;background:radial-gradient(ellipse,rgba(26,58,42,.5) 0%,transparent 65%);pointer-events:none}
 .hero-img{position:absolute;right:-3%;bottom:0;width:52%;max-width:640px;opacity:.75;mix-blend-mode:luminosity;filter:brightness(.6) saturate(.8)}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,8,7,.85) 35%,rgba(8,8,7,.3) 70%,transparent 100%)}
@@ -160,7 +160,7 @@ h2 em{color:var(--gold2);font-style:italic}
 
 /* OFFERS */
 #offers{padding:0}
-.offers-wrap{padding:7rem 5%;background:linear-gradient(135deg,rgba(8,8,7,.97) 0%,rgba(20,50,35,.92) 50%,rgba(8,8,7,.97) 100%);border-top:1px solid rgba(201,168,76,.18);border-bottom:1px solid rgba(201,168,76,.18);position:relative;overflow:hidden;text-align:center}
+.offers-wrap{padding:7rem 5%;background:linear-gradient(135deg,rgba(34,34,32,.97) 0%,rgba(30,65,48,.92) 50%,rgba(34,34,32,.97) 100%);border-top:1px solid rgba(201,168,76,.18);border-bottom:1px solid rgba(201,168,76,.18);position:relative;overflow:hidden;text-align:center}
 .offers-dots{position:absolute;inset:0;background-image:radial-gradient(rgba(201,168,76,.07) 1px,transparent 1px);background-size:38px 38px;pointer-events:none}
 .offers-cnt{position:relative;z-index:1;max-width:660px;margin:0 auto}
 .off-pill{display:inline-block;padding:.45rem 1.4rem;border:1px solid var(--gold);color:var(--gold);font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;margin-bottom:1.8rem;animation:glow 2.5s ease-in-out infinite}
@@ -170,7 +170,7 @@ h2 em{color:var(--gold2);font-style:italic}
 .offers-sub{font-family:'Playfair Display',serif;font-style:italic;font-size:1.1rem;color:var(--muted);margin-bottom:2.2rem}
 
 /* FOOTER */
-footer{background:#050504;border-top:1px solid rgba(201,168,76,.1);padding:4rem 5% 2rem}
+footer{background:#1c1c1a;border-top:1px solid rgba(201,168,76,.1);padding:4rem 5% 2rem}
 .foot-grid{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:4rem;padding-bottom:2.5rem;border-bottom:1px solid rgba(255,255,255,.06)}
 .foot-logo{display:flex;align-items:center;gap:.7rem;margin-bottom:1rem}
 .foot-logo img{height:46px;object-fit:contain}
@@ -263,7 +263,7 @@ footer{background:#050504;border-top:1px solid rgba(201,168,76,.1);padding:4rem 
     <div class="eyebrow">Pure From Nature</div>
     <h1>Premium<br><em>Virgin</em><br>Coconut Oil</h1>
     <p class="sub"><b>100% Pure</b> &nbsp;&middot;&nbsp; Traditionally Fermented</p>
-    <a class="btn" href="https://wa.me/918754121458?text=Hi%20I%20want%20to%20order%20Athra%20Naturals%20Coconut%20Oil" target="_blank" rel="noopener">
+    <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=Hi%20I%20want%20to%20order%20Athra%20Naturals%20Coconut%20Oil" target="_blank" rel="noopener">
       <span>Order Now</span>
       <svg width="13" height="13" fill="none" viewBox="0 0 13 13"><path d="M1 6.5h11M7.5 2l4.5 4.5L7.5 11" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
@@ -357,7 +357,7 @@ footer{background:#050504;border-top:1px solid rgba(201,168,76,.1);padding:4rem 
         <div class="prod-info">
           <div class="prod-name">Trial Size</div>
           <div class="prod-desc">Perfect for first-time customers. Discover the purity of ATHRA NATURALS in a travel-friendly bottle.</div>
-          <a class="order-btn" href="https://wa.me/918754121458?text=Hi%20I%20want%20to%20order%20Athra%20Naturals%20100ml" target="_blank">Order on WhatsApp</a>
+          <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=Hi%20I%20want%20to%20order%20Athra%20Naturals%20100ml" target="_blank">Order on WhatsApp</a>
         </div>
       </div>
       <div class="prod-card reveal d1">
@@ -368,7 +368,7 @@ footer{background:#050504;border-top:1px solid rgba(201,168,76,.1);padding:4rem 
         <div class="prod-info">
           <div class="prod-name">Personal Use</div>
           <div class="prod-desc">Ideal for daily hair and skin care routines. A month's supply of pure, fermented coconut oil.</div>
-          <a class="order-btn" href="https://wa.me/918754121458?text=Hi%20I%20want%20to%20order%20Athra%20Naturals%20250ml" target="_blank">Order on WhatsApp</a>
+          <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=Hi%20I%20want%20to%20order%20Athra%20Naturals%20250ml" target="_blank">Order on WhatsApp</a>
         </div>
       </div>
       <div class="prod-card reveal d2">
@@ -379,7 +379,7 @@ footer{background:#050504;border-top:1px solid rgba(201,168,76,.1);padding:4rem 
         <div class="prod-info">
           <div class="prod-name">Family Pack</div>
           <div class="prod-desc">Our most popular size. For families who have made ATHRA NATURALS part of their daily wellness.</div>
-          <a class="order-btn" href="https://wa.me/918754121458?text=Hi%20I%20want%20to%20order%20Athra%20Naturals%20500ml" target="_blank">Order on WhatsApp</a>
+          <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=Hi%20I%20want%20to%20order%20Athra%20Naturals%20500ml" target="_blank">Order on WhatsApp</a>
         </div>
       </div>
       <div class="prod-card reveal d3">
@@ -390,7 +390,7 @@ footer{background:#050504;border-top:1px solid rgba(201,168,76,.1);padding:4rem 
         <div class="prod-info">
           <div class="prod-name">Value Pack</div>
           <div class="prod-desc">Best value, best supply. Ideal for gifting loved ones who deserve the finest quality.</div>
-          <a class="order-btn" href="https://wa.me/918754121458?text=Hi%20I%20want%20to%20order%20Athra%20Naturals%201000ml" target="_blank">Order on WhatsApp</a>
+          <a class="order-btn" href="https://wa.me/91XXXXXXXXXX?text=Hi%20I%20want%20to%20order%20Athra%20Naturals%201000ml" target="_blank">Order on WhatsApp</a>
         </div>
       </div>
     </div>
@@ -477,14 +477,14 @@ footer{background:#050504;border-top:1px solid rgba(201,168,76,.1);padding:4rem 
           <span class="faq-q-text">How can I place an order?</span>
           <span class="faq-icon"><svg width="12" height="12" fill="none" viewBox="0 0 12 12"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></span>
         </div>
-        <div class="faq-a"><div class="faq-a-inner">Simply click any "Order on WhatsApp" button on this page to connect with us directly. Tell us your preferred size (100ml, 250ml, 500ml, or 1000ml) and delivery address. We deliver across India. You can also email athranaturals@gmail.com or visit athranaturals.co.in.</div></div>
+        <div class="faq-a"><div class="faq-a-inner">Simply click any "Order on WhatsApp" button on this page to connect with us directly. Tell us your preferred size (100ml, 250ml, 500ml, or 1000ml) and delivery address. We deliver across India. You can also email <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0766736f75666966737275666b7447606a666e6b2964686a">[email&#160;protected]</a> or visit athranaturals.co.in.</div></div>
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">
           <span class="faq-q-text">Do you offer bulk or wholesale orders?</span>
           <span class="faq-icon"><svg width="12" height="12" fill="none" viewBox="0 0 12 12"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></span>
         </div>
-        <div class="faq-a"><div class="faq-a-inner">Yes! We welcome bulk orders for families, wellness practitioners, yoga studios, restaurants, and retailers. Contact us on WhatsApp or at athranaturals@gmail.com with your requirements for special pricing. We also offer festival gift hampers and corporate gifting packages.</div></div>
+        <div class="faq-a"><div class="faq-a-inner">Yes! We welcome bulk orders for families, wellness practitioners, yoga studios, restaurants, and retailers. Contact us on WhatsApp or at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="abcadfc3d9cac5cadfded9cac7d8ebccc6cac2c785c8c4c6">[email&#160;protected]</a> with your requirements for special pricing. We also offer festival gift hampers and corporate gifting packages.</div></div>
       </div>
     </div>
   </div>
@@ -498,7 +498,7 @@ footer{background:#050504;border-top:1px solid rgba(201,168,76,.1);padding:4rem 
       <div class="off-pill">&#10022; Special Launch Offer &#10022;</div>
       <div class="offers-title">Launching <span>Offers</span><br>Available Now</div>
       <div class="offers-sub">Celebrate our launch with exclusive introductory prices. Limited time only.</div>
-      <a class="btn" href="https://wa.me/918754121458?text=Hi%20I%20want%20to%20know%20about%20Athra%20Naturals%20launch%20offers" target="_blank" rel="noopener">
+      <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=Hi%20I%20want%20to%20know%20about%20Athra%20Naturals%20launch%20offers" target="_blank" rel="noopener">
         <span>Claim Your Offer</span>
         <svg width="13" height="13" fill="none" viewBox="0 0 13 13"><path d="M1 6.5h11M7.5 2l4.5 4.5L7.5 11" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
@@ -535,7 +535,7 @@ footer{background:#050504;border-top:1px solid rgba(201,168,76,.1);padding:4rem 
       </div>
       <div class="contact-row">
         <svg class="c-icon" width="15" height="15" fill="none" viewBox="0 0 15 15"><rect x="1.5" y="3.5" width="12" height="8" rx="1.5" stroke="currentColor" stroke-width="1.1"/><path d="M1.5 4.5l6 4.5 6-4.5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>
-        <div class="c-txt"><a href="mailto:athranaturals@gmail.com">athranaturals@gmail.com</a></div>
+        <div class="c-txt"><a href="/cdn-cgi/l/email-protection#0465706c76656a65707176656877446369656d682a676b69"><span class="__cf_email__" data-cfemail="3352475b41525d52474641525f4073545e525a5f1d505c5e">[email&#160;protected]</span></a></div>
       </div>
       <div class="contact-row">
         <svg class="c-icon" width="15" height="15" fill="none" viewBox="0 0 15 15"><circle cx="7.5" cy="7.5" r="5.5" stroke="currentColor" stroke-width="1.1"/><path d="M7.5 2C7.5 2 5.5 4.5 5.5 7.5S7.5 13 7.5 13M7.5 2C7.5 2 9.5 4.5 9.5 7.5S7.5 13 7.5 13M2 7.5h11" stroke="currentColor" stroke-width="1.1"/></svg>
@@ -545,7 +545,7 @@ footer{background:#050504;border-top:1px solid rgba(201,168,76,.1);padding:4rem 
         <a class="s-link" href="https://instagram.com/athra_naturals" target="_blank" aria-label="Instagram">
           <svg width="15" height="15" fill="none" viewBox="0 0 15 15"><rect x="2" y="2" width="11" height="11" rx="3" stroke="currentColor" stroke-width="1.1"/><circle cx="7.5" cy="7.5" r="2.5" stroke="currentColor" stroke-width="1.1"/><circle cx="11" cy="4" r=".7" fill="currentColor"/></svg>
         </a>
-        <a class="s-link" href="https://wa.me/918754121458" target="_blank" aria-label="WhatsApp">
+        <a class="s-link" href="https://wa.me/91XXXXXXXXXX" target="_blank" aria-label="WhatsApp">
           <svg width="15" height="15" fill="none" viewBox="0 0 15 15"><circle cx="7.5" cy="7.5" r="5.5" stroke="currentColor" stroke-width="1.1"/><path d="M5 5.5c.5 1 1.5 3 4.5 4.5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>
         </a>
       </div>
@@ -557,7 +557,7 @@ footer{background:#050504;border-top:1px solid rgba(201,168,76,.1);padding:4rem 
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // Navbar scroll
 var nav=document.getElementById('nav');
 window.addEventListener('scroll',function(){nav.classList.toggle('solid',window.scrollY>50)});
@@ -567,18 +567,4 @@ var ro=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isInterse
 document.querySelectorAll('.reveal').forEach(function(el){ro.observe(el)});
 
 // Ticker
-var words=['100% Pure','Traditionally Fermented','Chemical Free','Cold Process','Hair & Skin Benefits','Virgin Coconut Oil','ATHRA NATURALS','No Additives','Handcrafted','Lauric Acid Rich'];
-var t=document.getElementById('ticker');
-var all=[...words,...words,...words,...words];
-t.innerHTML=all.map(function(w){return'<span class="ticker-item"><span class="ticker-dot">\u2736</span>'+w+'</span>'}).join('');
-
-// FAQ
-function toggleFaq(el){
-  var item=el.parentElement;
-  var isOpen=item.classList.contains('open');
-  document.querySelectorAll('.faq-item.open').forEach(function(i){i.classList.remove('open')});
-  if(!isOpen)item.classList.add('open');
-}
-</script>
-</body>
-</html>
+var words=['100% Pure','Traditionally Fermented','Chemical Free','Cold Process','Hair & Skin Benefits','Virgin Coconut Oil','ATHRA NATURALS','No Additives','Handcrafted','Lauric
