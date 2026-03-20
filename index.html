@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Athra Naturals</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #0f0f0f;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: black;
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: gold;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.hero {
+    height: 90vh;
+    background: url('https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2') no-repeat center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+    color: gold;
+}
+
+.btn {
+    padding: 12px 25px;
+    background: gold;
+    color: black;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.section {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+}
+
+.card img {
+    width: 100%;
+}
+
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    padding: 15px;
+    border-radius: 50%;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">ATHRA NATURALS</div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#shop">Shop</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div>
+        <h1>Premium Virgin Coconut Oil</h1>
+        <p>100% Pure | Fermented</p>
+        <button class="btn" onclick="orderNow()">Order Now</button>
+    </div>
+</section>
+
+<section class="section">
+    <h2>🔥 Offers</h2>
+    <p>Launching Soon – Special Discounts Available!</p>
+</section>
+
+<section id="shop" class="section">
+    <h2>Our Products</h2>
+    <div class="products">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1589985270826-4b7bb135bc9d">
+            <h3>100 ml</h3>
+            <button class="btn" onclick="orderNow()">Order</button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1589985270826-4b7bb135bc9d">
+            <h3>250 ml</h3>
+            <button class="btn" onclick="orderNow()">Order</button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1589985270826-4b7bb135bc9d">
+            <h3>500 ml</h3>
+            <button class="btn" onclick="orderNow()">Order</button>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="section">
+    <h2>About Us</h2>
+    <p>
+        Athra Naturals brings you premium fermented virgin coconut oil
+        made with purity and traditional methods.
+    </p>
+</section>
+
+<a class="whatsapp" href="#" onclick="orderNow()">💬</a>
+
+<script>
+function orderNow() {
+    window.open("https://wa.me/91XXXXXXXXXX?text=Hi%20I%20want%20to%20order%20Athra%20Naturals%20Coconut%20Oil", "_blank");
+}
+</script>
+
+</body>
+</html>
