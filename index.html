@@ -16,8 +16,6 @@
 <meta property="og:url" content="https://www.athranaturals.co.in">
 <meta property="og:type" content="website">
 <style>
-
-/* ── RESET & ROOT ── */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 :root {
@@ -30,261 +28,252 @@ html { scroll-behavior: smooth; }
   --cream: #f2ede4;
   --muted: rgba(242,237,228,0.55);
 }
-body {
-  background: var(--black);
-  color: var(--cream);
-  font-family: 'Jost', sans-serif;
-  font-weight: 300;
-  overflow-x: hidden;
-}
+body { background: var(--black); color: var(--cream); font-family: 'Jost', sans-serif; font-weight: 300; overflow-x: hidden; }
 ::-webkit-scrollbar { width: 3px; }
 ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
 
-/* ── NAV ── */
-nav {
-  position: fixed; top: 0; left: 0; width: 100%; z-index: 999;
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 1.2rem 5%;
-  transition: all .4s ease;
-}
-nav.solid {
-  background: rgba(34,34,32,0.97);
-  border-bottom: 1px solid rgba(201,168,76,0.15);
-  padding: .85rem 5%;
-}
+/* NAV */
+nav { position: fixed; top: 0; left: 0; width: 100%; z-index: 999; display: flex; align-items: center; justify-content: space-between; padding: 1.2rem 5%; transition: all .4s ease; }
+nav.solid { background: rgba(34,34,32,0.97); border-bottom: 1px solid rgba(201,168,76,0.15); padding: .85rem 5%; }
 .logo { display: flex; align-items: center; gap: .7rem; text-decoration: none; }
 .logo img { height: 40px; width: 40px; object-fit: contain; }
-.logo-text {
-  font-family: 'Playfair Display', serif;
-  font-size: 1rem; letter-spacing: .18em;
-  color: var(--cream); font-weight: 600; text-transform: uppercase;
-}
+.logo-text { font-family: 'Playfair Display', serif; font-size: 1rem; letter-spacing: .18em; color: var(--cream); font-weight: 600; text-transform: uppercase; }
 .logo-text span { color: var(--gold); }
-.nav-links { display: flex; gap: 2rem; list-style: none; }
-.nav-links a {
-  color: rgba(242,237,228,0.65); text-decoration: none;
-  font-size: .72rem; letter-spacing: .18em; text-transform: uppercase;
-  transition: color .3s;
-}
+.nav-links { display: flex; gap: 1.5rem; list-style: none; }
+.nav-links a { color: rgba(242,237,228,0.65); text-decoration: none; font-size: .68rem; letter-spacing: .15em; text-transform: uppercase; transition: color .3s; }
 .nav-links a:hover { color: var(--gold); }
-.hbg {
-  display: none; flex-direction: column; gap: 5px;
-  cursor: pointer; background: none; border: none; padding: 4px;
-}
+.hbg { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
 .hbg span { display: block; width: 22px; height: 1px; background: var(--cream); }
 
-/* ── MOBILE MENU ── */
-.mob {
-  display: none; position: fixed; inset: 0;
-  background: rgba(34,34,32,0.98); z-index: 998;
-  flex-direction: column; align-items: center; justify-content: center; gap: 2.5rem;
-}
+/* MOBILE MENU */
+.mob { display: none; position: fixed; inset: 0; background: rgba(34,34,32,0.98); z-index: 998; flex-direction: column; align-items: center; justify-content: center; gap: 2rem; overflow-y: auto; padding: 3rem 2rem; }
 .mob.on { display: flex; }
-.mob a { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--cream); text-decoration: none; }
+.mob a { font-family: 'Playfair Display', serif; font-size: 1.6rem; color: var(--cream); text-decoration: none; }
 .mob a:hover { color: var(--gold); }
 .mob-close { position: absolute; top: 1.8rem; right: 2rem; background: none; border: none; color: var(--cream); font-size: 1.5rem; cursor: pointer; }
 
-/* ── HERO ── */
-#hero {
-  position: relative; height: 100vh; min-height: 620px;
-  display: flex; align-items: center; overflow: hidden;
-}
-.hero-bg {
-  position: absolute; inset: 0;
-  background: linear-gradient(120deg, #222220 0%, #1e2e24 55%, #222220 100%);
-}
-.hero-glow {
-  position: absolute; top: 20%; right: 5%; width: 55%; height: 70%;
-  background: radial-gradient(ellipse, rgba(26,58,42,0.5) 0%, transparent 65%);
-  pointer-events: none;
-}
-.hero-img {
-  position: absolute; right: -3%; bottom: 0; width: 52%; max-width: 640px;
-  opacity: 0.75; mix-blend-mode: luminosity; filter: brightness(0.6) saturate(0.8);
-}
-.hero-overlay {
-  position: absolute; inset: 0;
-  background: linear-gradient(90deg, rgba(34,34,32,0.88) 35%, rgba(34,34,32,0.3) 70%, transparent 100%);
-}
+/* HERO */
+#hero { position: relative; height: 100vh; min-height: 620px; display: flex; align-items: center; overflow: hidden; }
+.hero-bg { position: absolute; inset: 0; background: linear-gradient(120deg, #222220 0%, #1e2e24 55%, #222220 100%); }
+.hero-glow { position: absolute; top: 20%; right: 5%; width: 55%; height: 70%; background: radial-gradient(ellipse, rgba(26,58,42,0.5) 0%, transparent 65%); pointer-events: none; }
+.hero-img { position: absolute; right: -3%; bottom: 0; width: 52%; max-width: 640px; opacity: 0.75; mix-blend-mode: luminosity; filter: brightness(0.6) saturate(0.8); }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(34,34,32,0.88) 35%, rgba(34,34,32,0.3) 70%, transparent 100%); }
 .hero-cnt { position: relative; z-index: 2; padding: 0 5%; max-width: 560px; }
-.eyebrow {
-  font-size: .65rem; letter-spacing: .35em; text-transform: uppercase;
-  color: var(--gold); margin-bottom: 1.4rem;
-  display: flex; align-items: center; gap: .8rem;
-}
+.eyebrow { font-size: .65rem; letter-spacing: .35em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.4rem; display: flex; align-items: center; gap: .8rem; }
 .eyebrow::before { content: ''; display: block; width: 35px; height: 1px; background: var(--gold); }
-h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(2.8rem, 6vw, 5rem);
-  line-height: 1.08; font-weight: 700; color: #fff; margin-bottom: .9rem;
-}
+h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.8rem, 6vw, 5rem); line-height: 1.08; font-weight: 700; color: #fff; margin-bottom: .9rem; }
 h1 em { font-style: italic; color: var(--gold2); }
-.hero-sub {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.1rem; font-style: italic; color: var(--muted); margin-bottom: 2.4rem;
-}
+.hero-sub { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-style: italic; color: var(--muted); margin-bottom: 2.4rem; }
 .hero-sub b { color: var(--green2); font-style: normal; font-weight: 400; }
-.btn {
-  display: inline-flex; align-items: center; gap: .7rem;
-  padding: .95rem 2.2rem; border: 1px solid var(--gold); color: var(--gold);
-  text-decoration: none; font-size: .72rem; letter-spacing: .22em; text-transform: uppercase;
-  position: relative; overflow: hidden; transition: color .35s;
-  font-family: 'Jost', sans-serif; cursor: pointer;
-}
-.btn::before {
-  content: ''; position: absolute; inset: 0;
-  background: var(--gold); transform: translateX(-100%);
-  transition: transform .35s cubic-bezier(.77,0,.175,1); z-index: 0;
-}
+.btn { display: inline-flex; align-items: center; gap: .7rem; padding: .95rem 2.2rem; border: 1px solid var(--gold); color: var(--gold); text-decoration: none; font-size: .72rem; letter-spacing: .22em; text-transform: uppercase; position: relative; overflow: hidden; transition: color .35s; font-family: 'Jost', sans-serif; cursor: pointer; }
+.btn::before { content: ''; position: absolute; inset: 0; background: var(--gold); transform: translateX(-100%); transition: transform .35s cubic-bezier(.77,0,.175,1); z-index: 0; }
 .btn:hover { color: var(--black); }
 .btn:hover::before { transform: translateX(0); }
 .btn span, .btn svg { position: relative; z-index: 1; }
-.scroll-hint {
-  position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
-  display: flex; flex-direction: column; align-items: center; gap: .4rem;
-  animation: bob 2s ease-in-out infinite;
-}
+.scroll-hint { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: .4rem; animation: bob 2s ease-in-out infinite; }
 .scroll-hint span { font-size: .55rem; letter-spacing: .3em; color: var(--muted); text-transform: uppercase; }
 .scroll-line { width: 1px; height: 45px; background: linear-gradient(var(--gold), transparent); }
-@keyframes bob {
-  0%, 100% { transform: translateX(-50%) translateY(0); }
-  50%       { transform: translateX(-50%) translateY(8px); }
-}
+@keyframes bob { 0%,100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(8px); } }
 
-/* ── TICKER ── */
-.ticker {
-  border-top: 1px solid rgba(201,168,76,0.15);
-  border-bottom: 1px solid rgba(201,168,76,0.15);
-  background: rgba(201,168,76,0.04); padding: 1rem 0; overflow: hidden;
-}
+/* TICKER */
+.ticker { border-top: 1px solid rgba(201,168,76,0.15); border-bottom: 1px solid rgba(201,168,76,0.15); background: rgba(201,168,76,0.04); padding: 1rem 0; overflow: hidden; }
 .ticker-inner { display: flex; white-space: nowrap; animation: tick 30s linear infinite; }
-.ticker-item {
-  flex-shrink: 0; padding: 0 2rem; font-size: .65rem; letter-spacing: .25em;
-  text-transform: uppercase; color: rgba(201,168,76,0.6);
-  display: flex; align-items: center; gap: 1.2rem;
-}
+.ticker-item { flex-shrink: 0; padding: 0 2rem; font-size: .65rem; letter-spacing: .25em; text-transform: uppercase; color: rgba(201,168,76,0.6); display: flex; align-items: center; gap: 1.2rem; }
 .ticker-dot { color: var(--gold); font-size: .45rem; }
 @keyframes tick { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
-/* ── SECTION COMMONS ── */
+/* SECTION COMMONS */
 section { padding: 6rem 5%; }
-.sec-eye {
-  font-size: .62rem; letter-spacing: .35em; text-transform: uppercase;
-  color: var(--gold); margin-bottom: .9rem;
-  display: flex; align-items: center; gap: .8rem;
-}
+.sec-eye { font-size: .62rem; letter-spacing: .35em; text-transform: uppercase; color: var(--gold); margin-bottom: .9rem; display: flex; align-items: center; gap: .8rem; }
 .sec-eye::before { content: ''; display: block; width: 28px; height: 1px; background: var(--gold); }
 .sec-eye.center { justify-content: center; }
 .sec-eye.center::before { display: none; }
-h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(1.9rem, 3.5vw, 3rem);
-  line-height: 1.15; color: #fff; font-weight: 600; margin-bottom: 1.4rem;
-}
+h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.9rem, 3.5vw, 3rem); line-height: 1.15; color: #fff; font-weight: 600; margin-bottom: 1.4rem; }
 h2 em { color: var(--gold2); font-style: italic; }
 .divider { width: 55px; height: 1px; background: linear-gradient(to right, var(--gold), transparent); margin: 1.5rem 0; }
+.section-intro { font-size: .92rem; color: var(--muted); line-height: 1.9; max-width: 750px; margin-bottom: 3rem; }
 
-/* ── ABOUT ── */
+/* ABOUT */
 #about { background: var(--dark); }
-.about-grid {
-  max-width: 1160px; margin: 0 auto;
-  display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;
-}
+.about-grid { max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
 .about-visual { position: relative; }
 .about-frame { border: 1px solid rgba(201,168,76,0.2); overflow: hidden; aspect-ratio: 3/4; }
-.about-frame img {
-  width: 100%; height: 100%; object-fit: cover;
-  filter: brightness(0.65) saturate(0.75); transition: transform .7s, filter .7s;
-}
+.about-frame img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.65) saturate(0.75); transition: transform .7s, filter .7s; }
 .about-frame:hover img { transform: scale(1.04); filter: brightness(0.78) saturate(0.95); }
-.badge {
-  position: absolute; bottom: -18px; right: -18px;
-  width: 96px; height: 96px; background: var(--green);
-  border: 1px solid rgba(201,168,76,0.3);
-  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .15rem;
-}
+.badge { position: absolute; bottom: -18px; right: -18px; width: 96px; height: 96px; background: var(--green); border: 1px solid rgba(201,168,76,0.3); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .15rem; }
 .badge-n { font-family: 'Playfair Display', serif; font-size: 1.9rem; color: var(--gold); line-height: 1; }
 .badge-t { font-size: .5rem; letter-spacing: .12em; color: var(--muted); text-transform: uppercase; text-align: center; }
 .about-text p { color: var(--muted); line-height: 1.9; font-size: .95rem; margin-bottom: 1.3rem; }
-.about-text .lead {
-  font-family: 'Playfair Display', serif; font-size: 1.2rem;
-  font-style: italic; color: rgba(242,237,228,0.82); line-height: 1.65;
-}
+.about-text .lead { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-style: italic; color: rgba(242,237,228,0.82); line-height: 1.65; }
 
-/* ── FEATURES ── */
+/* FEATURES */
 #features { background: linear-gradient(180deg, var(--black) 0%, var(--green) 55%, var(--black) 100%); }
 .feat-wrap { max-width: 1160px; margin: 0 auto; }
 .feat-head { text-align: center; margin-bottom: 3.5rem; }
-.feat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
-.feat-card {
-  padding: 2.2rem 1.6rem; border: 1px solid rgba(201,168,76,0.12);
-  background: rgba(34,34,32,0.55); transition: border-color .4s, transform .4s;
-  position: relative; overflow: hidden;
-}
-.feat-card::after {
-  content: ''; position: absolute; inset: 0;
-  background: linear-gradient(135deg, rgba(201,168,76,0.06), transparent);
-  opacity: 0; transition: opacity .4s;
-}
+.feat-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.2rem; }
+.feat-card { padding: 2.2rem 1.6rem; border: 1px solid rgba(201,168,76,0.12); background: rgba(34,34,32,0.55); transition: border-color .4s, transform .4s; position: relative; overflow: hidden; }
+.feat-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(201,168,76,0.06), transparent); opacity: 0; transition: opacity .4s; }
 .feat-card:hover { border-color: rgba(201,168,76,0.4); transform: translateY(-4px); }
 .feat-card:hover::after { opacity: 1; }
 .feat-icon { color: var(--gold); margin-bottom: 1.3rem; }
 .feat-title { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: #fff; margin-bottom: .6rem; }
 .feat-desc { font-size: .8rem; color: var(--muted); line-height: 1.8; }
 
-/* ── SHOP ── */
+/* SHOP */
 #shop { background: var(--dark); }
 .shop-wrap { max-width: 1160px; margin: 0 auto; }
-.prod-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; margin-top: 3rem; }
-.prod-card {
-  border: 1px solid rgba(201,168,76,0.12);
-  background: rgba(255,255,255,0.02); overflow: hidden;
-  transition: border-color .4s, transform .4s;
-}
+.prod-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.2rem; margin-top: 3rem; }
+.prod-card { border: 1px solid rgba(201,168,76,0.12); background: rgba(255,255,255,0.02); overflow: hidden; transition: border-color .4s, transform .4s; }
 .prod-card:hover { border-color: rgba(201,168,76,0.38); transform: translateY(-5px); }
-.prod-img {
-  height: 220px; overflow: hidden; position: relative;
-  background: #2a2a26; display: flex; align-items: center; justify-content: center;
-}
-.prod-img img {
-  width: 100%; height: 100%; object-fit: cover;
-  transition: transform .6s, filter .6s; filter: brightness(0.8) saturate(0.9);
-}
+.prod-img { height: 220px; overflow: hidden; position: relative; background: #2a2a26; display: flex; align-items: center; justify-content: center; }
+.prod-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s, filter .6s; filter: brightness(0.8) saturate(0.9); }
 .prod-card:hover .prod-img img { transform: scale(1.07); filter: brightness(0.95) saturate(1.05); }
-.prod-badge {
-  position: absolute; top: .8rem; left: .8rem; padding: .3rem .7rem;
-  background: rgba(34,34,32,0.9); border: 1px solid var(--gold);
-  color: var(--gold); font-size: .6rem; letter-spacing: .18em; text-transform: uppercase;
-}
+.prod-badge { position: absolute; top: .8rem; left: .8rem; padding: .3rem .7rem; background: rgba(34,34,32,0.9); border: 1px solid var(--gold); color: var(--gold); font-size: .6rem; letter-spacing: .18em; text-transform: uppercase; }
 .prod-info { padding: 1.3rem; }
 .prod-name { font-family: 'Playfair Display', serif; font-size: 1rem; color: #fff; margin-bottom: .45rem; }
 .prod-desc { font-size: .78rem; color: var(--muted); line-height: 1.7; margin-bottom: 1.3rem; }
-.order-btn {
-  display: block; width: 100%; padding: .7rem; text-align: center;
-  border: 1px solid rgba(201,168,76,0.38); color: var(--gold); text-decoration: none;
-  font-size: .65rem; letter-spacing: .2em; text-transform: uppercase;
-  transition: background .3s, color .3s; font-family: 'Jost', sans-serif;
-}
+.order-btn { display: block; width: 100%; padding: .7rem; text-align: center; border: 1px solid rgba(201,168,76,0.38); color: var(--gold); text-decoration: none; font-size: .65rem; letter-spacing: .2em; text-transform: uppercase; transition: background .3s, color .3s; font-family: 'Jost', sans-serif; }
 .order-btn:hover { background: var(--gold); color: var(--black); }
 
-/* ── VISION & MISSION ── */
+/* BENEFITS STRIP */
+#benefits-strip { background: var(--black); }
+.benefits-wrap { max-width: 1160px; margin: 0 auto; }
+.chip-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1rem; margin-top: 2.5rem; }
+.chip { padding: 1.6rem 1.2rem; border: 1px solid rgba(201,168,76,0.13); background: rgba(255,255,255,0.02); text-align: center; transition: border-color .3s, transform .3s; }
+.chip:hover { border-color: rgba(201,168,76,0.4); transform: translateY(-4px); }
+.chip-icon { font-size: 1.8rem; margin-bottom: .7rem; }
+.chip-title { font-family: 'Playfair Display', serif; font-size: .95rem; color: #fff; margin-bottom: .4rem; }
+.chip-text { font-size: .75rem; color: var(--muted); line-height: 1.7; }
+
+/* HOW TO USE */
+#howto { background: var(--dark); }
+.howto-wrap { max-width: 1160px; margin: 0 auto; }
+.howto-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.2rem; margin-top: 3rem; }
+.howto-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(201,168,76,0.12); padding: 2rem 1.6rem; position: relative; overflow: hidden; transition: border-color .3s, transform .3s; }
+.howto-card:hover { border-color: rgba(201,168,76,0.38); transform: translateY(-4px); }
+.howto-num { font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 700; color: rgba(201,168,76,0.1); position: absolute; top: .5rem; right: 1rem; line-height: 1; }
+.howto-icon { font-size: 1.5rem; margin-bottom: .8rem; }
+.howto-title { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: #fff; margin-bottom: .6rem; }
+.howto-text { font-size: .82rem; color: var(--muted); line-height: 1.8; }
+.howto-note { font-size: .75rem; color: var(--green2); margin-top: .6rem; font-style: italic; }
+
+/* HEALTH BENEFITS */
+#healthbenefits { background: var(--black); }
+.hb-wrap { max-width: 1160px; margin: 0 auto; }
+.hb-tabs { display: flex; gap: .6rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+.hb-tab { padding: .5rem 1.2rem; border: 1px solid rgba(201,168,76,0.2); color: var(--muted); font-size: .68rem; letter-spacing: .15em; text-transform: uppercase; cursor: pointer; transition: all .3s; background: none; font-family: 'Jost', sans-serif; }
+.hb-tab.active, .hb-tab:hover { border-color: var(--gold); color: var(--gold); background: rgba(201,168,76,0.06); }
+.hb-panel { display: none; }
+.hb-panel.active { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.2rem; }
+.hb-card { padding: 2rem 1.6rem; border: 1px solid rgba(201,168,76,0.12); background: rgba(255,255,255,0.02); transition: border-color .3s, transform .3s; }
+.hb-card:hover { border-color: rgba(201,168,76,0.35); transform: translateY(-4px); }
+.hb-card-icon { font-size: 1.5rem; margin-bottom: .9rem; }
+.hb-card-title { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--gold2); margin-bottom: .6rem; }
+.hb-card-text { font-size: .8rem; color: var(--muted); line-height: 1.82; }
+
+/* HAIR BENEFITS */
+#hairbenefits { background: var(--dark); }
+.hair-wrap { max-width: 1160px; margin: 0 auto; }
+.hair-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.2rem; margin-top: 2.5rem; }
+.hair-card { padding: 2rem 1.6rem; border: 1px solid rgba(201,168,76,0.12); background: rgba(255,255,255,0.02); transition: border-color .3s, transform .3s; }
+.hair-card:hover { border-color: rgba(201,168,76,0.38); transform: translateY(-4px); }
+.hair-icon { font-size: 1.5rem; margin-bottom: .8rem; }
+.hair-title { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--gold2); margin-bottom: .6rem; }
+.hair-text { font-size: .8rem; color: var(--muted); line-height: 1.82; }
+.hair-howto { margin-top: 3rem; padding: 2.5rem; border: 1px solid rgba(201,168,76,0.15); background: rgba(255,255,255,0.02); }
+.hair-howto-title { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--gold2); margin-bottom: 1.5rem; }
+.hair-tips { display: grid; grid-template-columns: repeat(2,1fr); gap: 1rem; }
+.hair-tip { display: flex; gap: .8rem; }
+.hair-tip-dot { color: var(--gold); font-size: .7rem; flex-shrink: 0; margin-top: .3rem; }
+.hair-tip-text { font-size: .82rem; color: var(--muted); line-height: 1.75; }
+
+/* SKIN BENEFITS */
+#skinbenefits { background: var(--black); }
+.skin-wrap { max-width: 1160px; margin: 0 auto; }
+.skin-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1rem; margin-top: 2.5rem; }
+.skin-card { padding: 1.8rem 1.4rem; border: 1px solid rgba(201,168,76,0.12); background: rgba(255,255,255,0.02); transition: border-color .3s, transform .3s; }
+.skin-card:hover { border-color: rgba(201,168,76,0.38); transform: translateY(-4px); }
+.skin-icon { font-size: 1.5rem; margin-bottom: .8rem; }
+.skin-title { font-family: 'Playfair Display', serif; font-size: .95rem; color: var(--gold2); margin-bottom: .5rem; }
+.skin-text { font-size: .78rem; color: var(--muted); line-height: 1.75; }
+.skin-extra { margin-top: 2rem; display: grid; grid-template-columns: repeat(4,1fr); gap: 1rem; }
+.skin-mini { padding: 1.2rem; border: 1px solid rgba(201,168,76,0.1); background: rgba(255,255,255,0.01); }
+.skin-mini-title { font-size: .82rem; color: var(--gold); margin-bottom: .35rem; font-weight: 500; }
+.skin-mini-text { font-size: .74rem; color: var(--muted); line-height: 1.7; }
+
+/* BABY & COOKING */
+#babyandcooking { background: var(--dark); }
+.bc-wrap { max-width: 1160px; margin: 0 auto; }
+.bc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 3rem; }
+.bc-card { padding: 2.5rem 2rem; border: 1px solid rgba(201,168,76,0.15); background: rgba(255,255,255,0.02); position: relative; overflow: hidden; }
+.bc-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--gold), transparent); }
+.bc-card-icon { font-size: 2rem; margin-bottom: 1rem; }
+.bc-card-title { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: #fff; margin-bottom: 1rem; }
+.bc-card-title em { color: var(--gold2); font-style: italic; }
+.bc-list { display: flex; flex-direction: column; gap: .7rem; }
+.bc-item { display: flex; gap: .8rem; align-items: flex-start; }
+.bc-item::before { content: '✦'; color: var(--gold); font-size: .55rem; flex-shrink: 0; margin-top: .3rem; }
+.bc-item-text { font-size: .84rem; color: var(--muted); line-height: 1.75; }
+
+/* NUTRIENTS & TYPES */
+#nutrients { background: var(--black); }
+.nt-wrap { max-width: 1160px; margin: 0 auto; }
+.nt-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 3rem; align-items: start; }
+.nutrient-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.nutrient-card { padding: 1.5rem; border: 1px solid rgba(201,168,76,0.13); background: rgba(255,255,255,0.02); }
+.nutrient-name { font-family: 'Playfair Display', serif; color: var(--gold2); font-size: .95rem; margin-bottom: .4rem; }
+.nutrient-desc { font-size: .78rem; color: var(--muted); line-height: 1.7; }
+.types-table-wrap { overflow-x: auto; }
+.types-table { width: 100%; border-collapse: collapse; font-size: .78rem; }
+.types-table th { padding: .9rem 1rem; background: rgba(201,168,76,0.1); color: var(--gold); font-family: 'Playfair Display', serif; font-weight: 600; text-align: left; border-bottom: 1px solid rgba(201,168,76,0.2); font-size: .82rem; }
+.types-table td { padding: .85rem 1rem; color: var(--muted); border-bottom: 1px solid rgba(255,255,255,0.05); line-height: 1.6; vertical-align: top; }
+.types-table tr:hover td { background: rgba(201,168,76,0.03); }
+.types-table td:first-child { color: var(--cream); font-weight: 500; }
+
+/* MYTHS */
+#myths { background: var(--dark); }
+.myths-wrap { max-width: 900px; margin: 0 auto; }
+.myth-list { display: flex; flex-direction: column; gap: 1rem; margin-top: 3rem; }
+.myth-card { border: 1px solid rgba(201,168,76,0.12); overflow: hidden; background: rgba(255,255,255,0.02); }
+.myth-card.open { border-color: rgba(201,168,76,0.35); }
+.myth-header { padding: 1.3rem 1.6rem; display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; cursor: pointer; transition: background .3s; }
+.myth-card.open .myth-header { background: rgba(201,168,76,0.06); border-bottom: 1px solid rgba(201,168,76,0.12); }
+.myth-label { display: flex; flex-direction: column; gap: .3rem; flex: 1; }
+.myth-tag { font-size: .58rem; letter-spacing: .25em; text-transform: uppercase; color: #e07070; }
+.myth-card.open .myth-tag { color: var(--green2); }
+.myth-q { font-family: 'Playfair Display', serif; font-size: .98rem; color: #fff; line-height: 1.4; }
+.myth-toggle { flex-shrink: 0; width: 26px; height: 26px; border: 1px solid rgba(201,168,76,0.3); display: flex; align-items: center; justify-content: center; color: var(--gold); transition: transform .3s, background .3s; margin-top: .2rem; }
+.myth-card.open .myth-toggle { transform: rotate(45deg); background: var(--gold); color: var(--black); }
+.myth-body { max-height: 0; overflow: hidden; transition: max-height .4s cubic-bezier(.4,0,.2,1); }
+.myth-card.open .myth-body { max-height: 200px; }
+.myth-inner { padding: 1.2rem 1.6rem; }
+.myth-fact-tag { font-size: .6rem; letter-spacing: .2em; text-transform: uppercase; color: var(--green2); margin-bottom: .4rem; }
+.myth-fact-text { font-size: .85rem; color: var(--muted); line-height: 1.85; }
+
+/* COCONUT MILK */
+#coconutmilk { background: linear-gradient(180deg, var(--black) 0%, var(--green) 50%, var(--black) 100%); }
+.milk-wrap { max-width: 1160px; margin: 0 auto; }
+.milk-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.2rem; margin-top: 2.5rem; }
+.milk-card { padding: 2rem 1.6rem; border: 1px solid rgba(201,168,76,0.15); background: rgba(34,34,32,0.55); transition: border-color .3s, transform .3s; }
+.milk-card:hover { border-color: rgba(201,168,76,0.4); transform: translateY(-4px); }
+.milk-icon { font-size: 1.5rem; margin-bottom: 1rem; }
+.milk-title { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--gold2); margin-bottom: .6rem; }
+.milk-text { font-size: .82rem; color: var(--muted); line-height: 1.8; }
+
+/* GUIDELINES BANNER */
+.guide-banner { background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.2); padding: 1.5rem 2rem; margin-top: 2rem; display: flex; align-items: flex-start; gap: 1rem; border-radius: 0; }
+.guide-icon { font-size: 1.4rem; flex-shrink: 0; }
+.guide-text { font-size: .85rem; color: var(--muted); line-height: 1.8; }
+.guide-text strong { color: var(--gold); }
+
+/* VISION MISSION */
 #vision { background: var(--black); }
 .vm-wrap { max-width: 1160px; margin: 0 auto; }
 .vm-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 3rem; }
-.vm-card {
-  padding: 3rem 2.5rem; border: 1px solid rgba(201,168,76,0.15);
-  position: relative; overflow: hidden; background: rgba(255,255,255,0.02);
-}
-.vm-card::before {
-  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
-  background: linear-gradient(90deg, var(--gold), transparent);
-}
+.vm-card { padding: 3rem 2.5rem; border: 1px solid rgba(201,168,76,0.15); position: relative; overflow: hidden; background: rgba(255,255,255,0.02); }
+.vm-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--gold), transparent); }
 .vm-card.mission::before { background: linear-gradient(90deg, var(--green2), transparent); }
-.vm-label {
-  font-size: .6rem; letter-spacing: .35em; text-transform: uppercase;
-  color: var(--gold); margin-bottom: 1.2rem;
-  display: flex; align-items: center; gap: .7rem;
-}
+.vm-label { font-size: .6rem; letter-spacing: .35em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.2rem; display: flex; align-items: center; gap: .7rem; }
 .vm-label::before { content: ''; display: block; width: 24px; height: 1px; background: var(--gold); }
 .vm-card.mission .vm-label { color: var(--green2); }
 .vm-card.mission .vm-label::before { background: var(--green2); }
@@ -297,73 +286,35 @@ h2 em { color: var(--gold2); font-style: italic; }
 .vm-val::before { content: '✦'; color: var(--gold); font-size: .55rem; flex-shrink: 0; }
 .vm-card.mission .vm-val::before { color: var(--green2); }
 
-/* ── FAQ ── */
+/* FAQ */
 #faq { background: var(--dark); }
 .faq-wrap { max-width: 820px; margin: 0 auto; }
 .faq-list { margin-top: 3rem; display: flex; flex-direction: column; gap: .8rem; }
 .faq-item { border: 1px solid rgba(201,168,76,0.12); overflow: hidden; transition: border-color .3s; }
 .faq-item.open { border-color: rgba(201,168,76,0.35); }
-.faq-q {
-  padding: 1.4rem 1.6rem; display: flex; justify-content: space-between;
-  align-items: center; cursor: pointer; gap: 1rem;
-  background: rgba(255,255,255,0.02); transition: background .3s;
-}
+.faq-q { padding: 1.4rem 1.6rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer; gap: 1rem; background: rgba(255,255,255,0.02); transition: background .3s; }
 .faq-item.open .faq-q { background: rgba(201,168,76,0.06); }
 .faq-q-text { font-family: 'Playfair Display', serif; font-size: 1rem; color: #fff; font-weight: 400; line-height: 1.4; }
-.faq-icon {
-  flex-shrink: 0; width: 24px; height: 24px;
-  border: 1px solid rgba(201,168,76,0.35);
-  display: flex; align-items: center; justify-content: center;
-  color: var(--gold); transition: transform .35s, background .3s;
-}
+.faq-icon { flex-shrink: 0; width: 24px; height: 24px; border: 1px solid rgba(201,168,76,0.35); display: flex; align-items: center; justify-content: center; color: var(--gold); transition: transform .35s, background .3s; }
 .faq-item.open .faq-icon { transform: rotate(45deg); background: var(--gold); color: var(--black); }
 .faq-a { max-height: 0; overflow: hidden; transition: max-height .4s cubic-bezier(.4,0,.2,1); }
 .faq-item.open .faq-a { max-height: 300px; }
 .faq-a-inner { padding: 0 1.6rem 1.4rem; font-size: .87rem; color: var(--muted); line-height: 1.85; }
 
-/* ── OFFERS ── */
+/* OFFERS */
 #offers { padding: 0; }
-.offers-wrap {
-  padding: 7rem 5%;
-  background: linear-gradient(135deg, rgba(34,34,32,0.97) 0%, rgba(30,65,48,0.92) 50%, rgba(34,34,32,0.97) 100%);
-  border-top: 1px solid rgba(201,168,76,0.18);
-  border-bottom: 1px solid rgba(201,168,76,0.18);
-  position: relative; overflow: hidden; text-align: center;
-}
-.offers-dots {
-  position: absolute; inset: 0;
-  background-image: radial-gradient(rgba(201,168,76,0.07) 1px, transparent 1px);
-  background-size: 38px 38px; pointer-events: none;
-}
+.offers-wrap { padding: 7rem 5%; background: linear-gradient(135deg, rgba(34,34,32,0.97) 0%, rgba(30,65,48,0.92) 50%, rgba(34,34,32,0.97) 100%); border-top: 1px solid rgba(201,168,76,0.18); border-bottom: 1px solid rgba(201,168,76,0.18); position: relative; overflow: hidden; text-align: center; }
+.offers-dots { position: absolute; inset: 0; background-image: radial-gradient(rgba(201,168,76,0.07) 1px, transparent 1px); background-size: 38px 38px; pointer-events: none; }
 .offers-cnt { position: relative; z-index: 1; max-width: 660px; margin: 0 auto; }
-.off-pill {
-  display: inline-block; padding: .45rem 1.4rem;
-  border: 1px solid var(--gold); color: var(--gold);
-  font-size: .6rem; letter-spacing: .3em; text-transform: uppercase; margin-bottom: 1.8rem;
-  animation: glow 2.5s ease-in-out infinite;
-}
-@keyframes glow {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(201,168,76,0.45); }
-  50%       { box-shadow: 0 0 0 10px rgba(201,168,76,0); }
-}
-.offers-title {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(2.2rem, 5vw, 3.8rem);
-  color: #fff; font-weight: 700; line-height: 1.1; margin-bottom: .9rem;
-}
+.off-pill { display: inline-block; padding: .45rem 1.4rem; border: 1px solid var(--gold); color: var(--gold); font-size: .6rem; letter-spacing: .3em; text-transform: uppercase; margin-bottom: 1.8rem; animation: glow 2.5s ease-in-out infinite; }
+@keyframes glow { 0%,100% { box-shadow: 0 0 0 0 rgba(201,168,76,0.45); } 50% { box-shadow: 0 0 0 10px rgba(201,168,76,0); } }
+.offers-title { font-family: 'Playfair Display', serif; font-size: clamp(2.2rem, 5vw, 3.8rem); color: #fff; font-weight: 700; line-height: 1.1; margin-bottom: .9rem; }
 .offers-title span { color: var(--gold); font-style: italic; }
-.offers-sub {
-  font-family: 'Playfair Display', serif; font-style: italic;
-  font-size: 1.1rem; color: var(--muted); margin-bottom: 2.2rem;
-}
+.offers-sub { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.1rem; color: var(--muted); margin-bottom: 2.2rem; }
 
-/* ── FOOTER ── */
+/* FOOTER */
 footer { background: #1c1c1a; border-top: 1px solid rgba(201,168,76,0.1); padding: 4rem 5% 2rem; }
-.foot-grid {
-  max-width: 1160px; margin: 0 auto;
-  display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem;
-  padding-bottom: 2.5rem; border-bottom: 1px solid rgba(255,255,255,0.06);
-}
+.foot-grid { max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem; padding-bottom: 2.5rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
 .foot-logo { display: flex; align-items: center; gap: .7rem; margin-bottom: 1rem; }
 .foot-logo img { height: 46px; object-fit: contain; }
 .foot-brand-name { font-family: 'Playfair Display', serif; font-size: 1.2rem; letter-spacing: .15em; color: #fff; margin-bottom: .7rem; }
@@ -379,34 +330,27 @@ footer { background: #1c1c1a; border-top: 1px solid rgba(201,168,76,0.1); paddin
 .c-txt a { color: var(--muted); text-decoration: none; transition: color .3s; }
 .c-txt a:hover { color: var(--gold); }
 .socials { display: flex; gap: .8rem; margin-top: 1.3rem; }
-.s-link {
-  width: 34px; height: 34px; border: 1px solid rgba(201,168,76,0.2);
-  display: flex; align-items: center; justify-content: center;
-  color: rgba(201,168,76,0.55); text-decoration: none; transition: all .3s;
-}
+.s-link { width: 34px; height: 34px; border: 1px solid rgba(201,168,76,0.2); display: flex; align-items: center; justify-content: center; color: rgba(201,168,76,0.55); text-decoration: none; transition: all .3s; }
 .s-link:hover { border-color: var(--gold); color: var(--gold); background: rgba(201,168,76,0.1); }
-.foot-bottom {
-  max-width: 1160px; margin: 2rem auto 0;
-  display: flex; justify-content: space-between;
-  font-size: .72rem; color: rgba(242,237,228,0.28);
-}
+.foot-bottom { max-width: 1160px; margin: 2rem auto 0; display: flex; justify-content: space-between; font-size: .72rem; color: rgba(242,237,228,0.28); }
 
-/* ── SCROLL REVEAL ── */
+/* REVEAL */
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity .75s ease, transform .75s ease; }
 .reveal.show { opacity: 1; transform: none; }
-.d1 { transition-delay: .08s; }
-.d2 { transition-delay: .16s; }
-.d3 { transition-delay: .24s; }
-.d4 { transition-delay: .32s; }
+.d1 { transition-delay: .08s; } .d2 { transition-delay: .16s; } .d3 { transition-delay: .24s; } .d4 { transition-delay: .32s; }
 
-/* ── RESPONSIVE ── */
+/* RESPONSIVE */
 @media (max-width: 1024px) {
-  .prod-grid  { grid-template-columns: repeat(2,1fr); }
-  .feat-grid  { grid-template-columns: repeat(2,1fr); }
+  .prod-grid, .feat-grid { grid-template-columns: repeat(2,1fr); }
   .about-grid { grid-template-columns: 1fr; gap: 3rem; }
   .about-visual { max-width: 380px; }
-  .vm-grid    { grid-template-columns: 1fr; }
-  .foot-grid  { grid-template-columns: 1fr 1fr; }
+  .vm-grid, .bc-grid, .nt-grid { grid-template-columns: 1fr; }
+  .chip-grid { grid-template-columns: repeat(2,1fr); }
+  .howto-grid, .hair-grid, .milk-grid { grid-template-columns: repeat(2,1fr); }
+  .skin-grid, .skin-extra { grid-template-columns: repeat(2,1fr); }
+  .hb-panel.active { grid-template-columns: repeat(2,1fr); }
+  .foot-grid { grid-template-columns: 1fr 1fr; }
+  .nutrient-cards { grid-template-columns: repeat(2,1fr); }
 }
 @media (max-width: 768px) {
   nav { padding: 1rem 5%; }
@@ -415,21 +359,23 @@ footer { background: #1c1c1a; border-top: 1px solid rgba(201,168,76,0.1); paddin
   section { padding: 4.5rem 5%; }
   .hero-img { width: 75%; opacity: .4; right: -8%; }
   .about-grid { grid-template-columns: 1fr; }
-  .foot-grid  { grid-template-columns: 1fr; gap: 2rem; }
+  .foot-grid { grid-template-columns: 1fr; gap: 2rem; }
   .foot-bottom { flex-direction: column; gap: .8rem; text-align: center; }
   .offers-wrap { padding: 5rem 5%; }
+  .hair-tips { grid-template-columns: 1fr; }
 }
 @media (max-width: 500px) {
-  .prod-grid { grid-template-columns: 1fr; }
-  .feat-grid { grid-template-columns: 1fr; }
-  .vm-grid   { grid-template-columns: 1fr; }
+  .prod-grid, .feat-grid, .howto-grid, .milk-grid, .hair-grid { grid-template-columns: 1fr; }
+  .chip-grid { grid-template-columns: 1fr 1fr; }
+  .skin-grid, .skin-extra { grid-template-columns: 1fr 1fr; }
+  .hb-panel.active { grid-template-columns: 1fr; }
+  .nutrient-cards { grid-template-columns: 1fr; }
 }
-
 </style>
 </head>
 <body>
 
-<!-- ══ NAV ══ -->
+<!-- NAV -->
 <nav id="nav">
   <a href="#hero" class="logo">
     <img src="logo.jpg" alt="Athra Naturals Logo">
@@ -439,6 +385,8 @@ footer { background: #1c1c1a; border-top: 1px solid rgba(201,168,76,0.1); paddin
     <li><a href="#hero">Home</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#shop">Shop</a></li>
+    <li><a href="#howto">How to Use</a></li>
+    <li><a href="#healthbenefits">Benefits</a></li>
     <li><a href="#offers">Offers</a></li>
     <li><a href="#vision">Vision</a></li>
     <li><a href="#faq">FAQ</a></li>
@@ -448,18 +396,20 @@ footer { background: #1c1c1a; border-top: 1px solid rgba(201,168,76,0.1); paddin
   </button>
 </nav>
 
-<!-- ══ MOBILE MENU ══ -->
+<!-- MOBILE MENU -->
 <div class="mob" id="mob">
   <button class="mob-close" id="mob-close">&#x2715;</button>
-  <a href="#hero"   class="mob-link">Home</a>
-  <a href="#about"  class="mob-link">About</a>
-  <a href="#shop"   class="mob-link">Shop</a>
-  <a href="#offers" class="mob-link">Offers</a>
-  <a href="#vision" class="mob-link">Vision</a>
-  <a href="#faq"    class="mob-link">FAQ</a>
+  <a href="#hero"          class="mob-link">Home</a>
+  <a href="#about"         class="mob-link">About</a>
+  <a href="#shop"          class="mob-link">Shop</a>
+  <a href="#howto"         class="mob-link">How to Use</a>
+  <a href="#healthbenefits" class="mob-link">Benefits</a>
+  <a href="#offers"        class="mob-link">Offers</a>
+  <a href="#vision"        class="mob-link">Vision</a>
+  <a href="#faq"           class="mob-link">FAQ</a>
 </div>
 
-<!-- ══ HERO ══ -->
+<!-- HERO -->
 <section id="hero">
   <div class="hero-bg"></div>
   <div class="hero-glow"></div>
@@ -474,28 +424,18 @@ footer { background: #1c1c1a; border-top: 1px solid rgba(201,168,76,0.1); paddin
       <svg width="13" height="13" fill="none" viewBox="0 0 13 13"><path d="M1 6.5h11M7.5 2l4.5 4.5L7.5 11" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
   </div>
-  <div class="scroll-hint">
-    <div class="scroll-line"></div>
-    <span>Scroll</span>
-  </div>
+  <div class="scroll-hint"><div class="scroll-line"></div><span>Scroll</span></div>
 </section>
 
-<!-- ══ TICKER ══ -->
-<div class="ticker">
-  <div class="ticker-inner" id="ticker"></div>
-</div>
+<!-- TICKER -->
+<div class="ticker"><div class="ticker-inner" id="ticker"></div></div>
 
-<!-- ══ ABOUT ══ -->
+<!-- ABOUT -->
 <section id="about">
   <div class="about-grid">
     <div class="about-visual reveal">
-      <div class="about-frame">
-        <img src="coconut.jpg" alt="Pure Coconut">
-      </div>
-      <div class="badge">
-        <span class="badge-n">100%</span>
-        <span class="badge-t">Pure &amp;<br>Natural</span>
-      </div>
+      <div class="about-frame"><img src="coconut.jpg" alt="Pure Coconut"></div>
+      <div class="badge"><span class="badge-n">100%</span><span class="badge-t">Pure &amp;<br>Natural</span></div>
     </div>
     <div class="about-text">
       <div class="sec-eye reveal">Our Story</div>
@@ -509,7 +449,7 @@ footer { background: #1c1c1a; border-top: 1px solid rgba(201,168,76,0.1); paddin
   </div>
 </section>
 
-<!-- ══ FEATURES ══ -->
+<!-- FEATURES -->
 <section id="features">
   <div class="feat-wrap">
     <div class="feat-head">
@@ -518,30 +458,22 @@ footer { background: #1c1c1a; border-top: 1px solid rgba(201,168,76,0.1); paddin
     </div>
     <div class="feat-grid">
       <div class="feat-card reveal">
-        <div class="feat-icon">
-          <svg width="30" height="30" fill="none" viewBox="0 0 30 30"><circle cx="15" cy="15" r="12" stroke="currentColor" stroke-width="1.2"/><path d="M9 15l4 4 8-8" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
+        <div class="feat-icon"><svg width="30" height="30" fill="none" viewBox="0 0 30 30"><circle cx="15" cy="15" r="12" stroke="currentColor" stroke-width="1.2"/><path d="M9 15l4 4 8-8" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <div class="feat-title">100% Pure</div>
         <div class="feat-desc">No additives, no preservatives. Just pure virgin coconut oil as nature intended — nothing added, nothing taken away.</div>
       </div>
       <div class="feat-card reveal d1">
-        <div class="feat-icon">
-          <svg width="30" height="30" fill="none" viewBox="0 0 30 30"><path d="M15 4S7 11 7 18a8 8 0 0016 0C23 11 15 4 15 4z" stroke="currentColor" stroke-width="1.2"/><path d="M15 19v-8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
-        </div>
+        <div class="feat-icon"><svg width="30" height="30" fill="none" viewBox="0 0 30 30"><path d="M15 4S7 11 7 18a8 8 0 0016 0C23 11 15 4 15 4z" stroke="currentColor" stroke-width="1.2"/><path d="M15 19v-8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></div>
         <div class="feat-title">Chemical Free</div>
         <div class="feat-desc">Zero hexane. Zero bleaching agents. Zero deodorising. Purely natural — the way it has been for centuries.</div>
       </div>
       <div class="feat-card reveal d2">
-        <div class="feat-icon">
-          <svg width="30" height="30" fill="none" viewBox="0 0 30 30"><path d="M7 25V11l8-7 8 7v14" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/><rect x="11" y="17" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.2"/></svg>
-        </div>
+        <div class="feat-icon"><svg width="30" height="30" fill="none" viewBox="0 0 30 30"><path d="M7 25V11l8-7 8 7v14" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/><rect x="11" y="17" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.2"/></svg></div>
         <div class="feat-title">Traditional Fermentation</div>
         <div class="feat-desc">Cold-process fermented over 24 to 48 hours preserving maximum nutrients, natural aroma, and the true essence of coconut.</div>
       </div>
       <div class="feat-card reveal d3">
-        <div class="feat-icon">
-          <svg width="30" height="30" fill="none" viewBox="0 0 30 30"><path d="M15 5c6 0 10 4.5 10 9s-4 8-10 8a10 10 0 01-6-2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><path d="M7 22a10 10 0 01-2-7c0-5 4-9 9-9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="14" r="3" stroke="currentColor" stroke-width="1.2"/></svg>
-        </div>
+        <div class="feat-icon"><svg width="30" height="30" fill="none" viewBox="0 0 30 30"><path d="M15 5c6 0 10 4.5 10 9s-4 8-10 8a10 10 0 01-6-2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><path d="M7 22a10 10 0 01-2-7c0-5 4-9 9-9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><circle cx="15" cy="14" r="3" stroke="currentColor" stroke-width="1.2"/></svg></div>
         <div class="feat-title">Hair &amp; Skin Benefits</div>
         <div class="feat-desc">Rich in lauric acid and vitamin E. Deep conditioning for hair, natural moisturiser for skin — total body nourishment.</div>
       </div>
@@ -549,17 +481,14 @@ footer { background: #1c1c1a; border-top: 1px solid rgba(201,168,76,0.1); paddin
   </div>
 </section>
 
-<!-- ══ SHOP ══ -->
+<!-- SHOP -->
 <section id="shop">
   <div class="shop-wrap">
     <div class="sec-eye reveal">Our Products</div>
     <h2 class="reveal d1">Choose Your <em>Size</em></h2>
     <div class="prod-grid">
       <div class="prod-card reveal">
-        <div class="prod-img">
-          <img src="product.png" alt="100ml Athra Naturals">
-          <span class="prod-badge">100ml</span>
-        </div>
+        <div class="prod-img"><img src="product.png" alt="100ml"><span class="prod-badge">100ml</span></div>
         <div class="prod-info">
           <div class="prod-name">Trial Size</div>
           <div class="prod-desc">Perfect for first-time customers. Discover the purity of ATHRA NATURALS in a travel-friendly bottle.</div>
@@ -567,10 +496,7 @@ footer { background: #1c1c1a; border-top: 1px solid rgba(201,168,76,0.1); paddin
         </div>
       </div>
       <div class="prod-card reveal d1">
-        <div class="prod-img">
-          <img src="product.png" alt="250ml Athra Naturals">
-          <span class="prod-badge">250ml</span>
-        </div>
+        <div class="prod-img"><img src="product.png" alt="250ml"><span class="prod-badge">250ml</span></div>
         <div class="prod-info">
           <div class="prod-name">Personal Use</div>
           <div class="prod-desc">Ideal for daily hair and skin care routines. A month's supply of pure, fermented coconut oil.</div>
@@ -578,10 +504,7 @@ footer { background: #1c1c1a; border-top: 1px solid rgba(201,168,76,0.1); paddin
         </div>
       </div>
       <div class="prod-card reveal d2">
-        <div class="prod-img">
-          <img src="product.png" alt="500ml Athra Naturals">
-          <span class="prod-badge">500ml</span>
-        </div>
+        <div class="prod-img"><img src="product.png" alt="500ml"><span class="prod-badge">500ml</span></div>
         <div class="prod-info">
           <div class="prod-name">Family Pack</div>
           <div class="prod-desc">Our most popular size. For families who have made ATHRA NATURALS part of their daily wellness.</div>
@@ -589,10 +512,7 @@ footer { background: #1c1c1a; border-top: 1px solid rgba(201,168,76,0.1); paddin
         </div>
       </div>
       <div class="prod-card reveal d3">
-        <div class="prod-img">
-          <img src="product.png" alt="1000ml Athra Naturals">
-          <span class="prod-badge">1000ml</span>
-        </div>
+        <div class="prod-img"><img src="product.png" alt="1000ml"><span class="prod-badge">1000ml</span></div>
         <div class="prod-info">
           <div class="prod-name">Value Pack</div>
           <div class="prod-desc">Best value, best supply. Ideal for gifting loved ones who deserve the finest quality.</div>
@@ -603,7 +523,260 @@ footer { background: #1c1c1a; border-top: 1px solid rgba(201,168,76,0.1); paddin
   </div>
 </section>
 
-<!-- ══ VISION & MISSION ══ -->
+<!-- BENEFITS STRIP -->
+<section id="benefits-strip">
+  <div class="benefits-wrap">
+    <div class="sec-eye reveal">At a Glance</div>
+    <h2 class="reveal d1">A Drop of <em>Wellness</em> for Everything</h2>
+    <p class="section-intro reveal d2">Ideal for cooking, baking, moisturizing, oil pulling, and baby massage — versatile for modern living with ancient wisdom. Store in a cool dry place and use in moderation (1–2 tbsp/day). Patch-test for sensitive skin.</p>
+    <div class="chip-grid">
+      <div class="chip reveal"><div class="chip-icon">🍳</div><div class="chip-title">Cooking &amp; Baking</div><div class="chip-text">High smoke point makes it perfect for sauteing, stir-fries, cakes, cookies, and muffins.</div></div>
+      <div class="chip reveal d1"><div class="chip-icon">✨</div><div class="chip-title">Skin Moisturiser</div><div class="chip-text">Seals in hydration leaving skin soft and supple. Safe for all skin types including sensitive skin.</div></div>
+      <div class="chip reveal d2"><div class="chip-icon">💆</div><div class="chip-title">Massage Oil</div><div class="chip-text">Smooth texture and pleasant aroma make it perfect for a soothing, nourishing body massage.</div></div>
+      <div class="chip reveal d3"><div class="chip-icon">👶</div><div class="chip-title">Baby Care</div><div class="chip-text">Safe and nourishing for delicate baby skin. Ideal for gentle baby massage and moisturising.</div></div>
+      <div class="chip reveal"><div class="chip-icon">🦷</div><div class="chip-title">Oil Pulling</div><div class="chip-text">Swish 1 tbsp for 10–20 mins each morning to remove toxins and promote oral health.</div></div>
+      <div class="chip reveal d1"><div class="chip-icon">💇</div><div class="chip-title">Hair Treatment</div><div class="chip-text">Deep nourishing hair mask for shiny, healthy hair. Apply warm, leave 30 mins, wash out.</div></div>
+      <div class="chip reveal d2"><div class="chip-icon">🛡️</div><div class="chip-title">UV Protection</div><div class="chip-text">Studies suggest routine usage guards against the harmful effects of UV radiation on skin.</div></div>
+      <div class="chip reveal d3"><div class="chip-icon">🌿</div><div class="chip-title">Anti-Ageing</div><div class="chip-text">Delays signs of wrinkles and skin ageing. Used safely for over a thousand years in Ayurveda.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO USE -->
+<section id="howto">
+  <div class="howto-wrap">
+    <div class="sec-eye reveal">Usage Guide</div>
+    <h2 class="reveal d1">How to Use <em>Virgin Coconut Oil</em></h2>
+    <div class="howto-grid">
+      <div class="howto-card reveal"><div class="howto-num">01</div><div class="howto-icon">🍳</div><div class="howto-title">Cooking</div><div class="howto-text">Use 1–2 tablespoons for sauteing vegetables or as a base for stir-fries. Its high smoke point makes it suitable for various cooking methods without losing its beneficial properties.</div></div>
+      <div class="howto-card reveal d1"><div class="howto-num">02</div><div class="howto-icon">🎂</div><div class="howto-title">Baking</div><div class="howto-text">Replace butter or other oils in your baking recipes for a subtle coconut flavour and added moisture. Works wonderfully in cakes, cookies, and muffins.</div></div>
+      <div class="howto-card reveal d2"><div class="howto-num">03</div><div class="howto-icon">✨</div><div class="howto-title">Skin Moisturiser</div><div class="howto-text">After a shower, apply a small amount to damp skin. It acts as an excellent moisturiser, sealing in hydration and leaving your skin soft and supple.</div></div>
+      <div class="howto-card reveal d3"><div class="howto-num">04</div><div class="howto-icon">💇</div><div class="howto-title">Hair Treatment</div><div class="howto-text">Warm 1–2 tablespoons and apply to hair, focusing on the ends. Leave for at least 30 minutes before washing out for shiny, healthy hair.</div></div>
+      <div class="howto-card reveal"><div class="howto-num">05</div><div class="howto-icon">🦷</div><div class="howto-title">Oil Pulling</div><div class="howto-text">Swish 1 tablespoon in your mouth for 10–20 minutes each morning to help remove toxins and promote oral health. Spit it out and rinse with warm water.</div><div class="howto-note">Ancient Ayurvedic practice for oral wellness</div></div>
+      <div class="howto-card reveal d1"><div class="howto-num">06</div><div class="howto-icon">💆</div><div class="howto-title">Massage Oil</div><div class="howto-text">Use as a base for massage oils. Its smooth texture and pleasant aroma make it perfect for a soothing massage that deeply nourishes the skin.</div></div>
+      <div class="howto-card reveal d2"><div class="howto-num">07</div><div class="howto-icon">👶</div><div class="howto-title">Baby Care</div><div class="howto-text">Gently massage your baby with virgin coconut oil for its calming and moisturising effects. Safe and nourishing for delicate infant skin — nature's gentlest care.</div></div>
+    </div>
+    <div class="guide-banner reveal">
+      <div class="guide-icon">💡</div>
+      <div class="guide-text"><strong>Guidelines:</strong> Like any other oil, use coconut oil in moderation. If you are a heart patient, limit it to 2–3 teaspoons a day. Store in a cool, dry place away from direct sunlight. Always use a clean, dry spoon to maintain purity.</div>
+    </div>
+  </div>
+</section>
+
+<!-- HEALTH BENEFITS -->
+<section id="healthbenefits">
+  <div class="hb-wrap">
+    <div class="sec-eye reveal">Wellness Inside Out</div>
+    <h2 class="reveal d1">Health <em>Benefits</em></h2>
+    <p class="section-intro reveal d2">From boosting metabolism to supporting immunity, ATHRA NATURALS virgin coconut oil delivers holistic wellness rooted in ancient Ayurvedic wisdom.</p>
+    <div class="hb-tabs reveal">
+      <button class="hb-tab active" onclick="showTab('general')">General Health</button>
+      <button class="hb-tab" onclick="showTab('weight')">Weight Management</button>
+      <button class="hb-tab" onclick="showTab('oral')">Oral Health</button>
+      <button class="hb-tab" onclick="showTab('heart')">Heart Health</button>
+      <button class="hb-tab" onclick="showTab('immune')">Immune Support</button>
+    </div>
+    <div id="tab-general" class="hb-panel active">
+      <div class="hb-card"><div class="hb-card-icon">⚡</div><div class="hb-card-title">Boosts Metabolism &amp; Energy</div><div class="hb-card-text">The MCTs in coconut oil are rapidly metabolized in the liver, providing a quick source of energy and increasing metabolic rate — an excellent fuel source for low-carb and ketogenic diets.</div></div>
+      <div class="hb-card"><div class="hb-card-icon">🌿</div><div class="hb-card-title">Supports Digestion &amp; Gut Health</div><div class="hb-card-text">Coconut oil contains antimicrobial properties that help balance gut flora, promoting better digestion and nutrient absorption. It soothes the digestive tract, reducing bloating and indigestion.</div></div>
+      <div class="hb-card"><div class="hb-card-icon">🛡️</div><div class="hb-card-title">Strengthens Immunity</div><div class="hb-card-text">Rich in lauric acid and caprylic acid, coconut oil has antibacterial, antiviral, and antifungal properties that help the body fight infections and enhance the body's natural defence system.</div></div>
+    </div>
+    <div id="tab-weight" class="hb-panel">
+      <div class="hb-card"><div class="hb-card-icon">🔥</div><div class="hb-card-title">Aids in Fat Burning</div><div class="hb-card-text">The thermogenic properties of MCTs help burn calories more efficiently, assisting in weight loss. Since MCTs are metabolized quickly, they provide immediate energy instead of being stored as fat.</div></div>
+      <div class="hb-card"><div class="hb-card-icon">💪</div><div class="hb-card-title">Reduces Belly Fat</div><div class="hb-card-text">When consumed in moderation, coconut oil can help reduce visceral fat, which accumulates around organs and is linked to various health issues. Regular intake combined with a healthy lifestyle may contribute to a leaner midsection.</div></div>
+    </div>
+    <div id="tab-oral" class="hb-panel">
+      <div class="hb-card"><div class="hb-card-icon">🦷</div><div class="hb-card-title">Oil Pulling for Better Hygiene</div><div class="hb-card-text">Swishing coconut oil for 10–15 minutes daily can help remove bacteria, prevent plaque buildup, and freshen breath. This traditional Ayurvedic practice aids in reducing harmful bacteria that contribute to gum disease and cavities.</div></div>
+      <div class="hb-card"><div class="hb-card-icon">😁</div><div class="hb-card-title">Prevents Bad Breath</div><div class="hb-card-text">Coconut oil's antimicrobial properties help eliminate harmful oral bacteria, leading to improved breath and overall oral hygiene. Regular oil pulling can reduce inflammation in the gums and promote stronger teeth.</div></div>
+    </div>
+    <div id="tab-heart" class="hb-panel">
+      <div class="hb-card"><div class="hb-card-icon">❤️</div><div class="hb-card-title">Improves Cholesterol Levels</div><div class="hb-card-text">While coconut oil contains saturated fats, it may help increase HDL (good cholesterol), which supports heart health. Higher levels of HDL cholesterol are associated with a reduced risk of cardiovascular diseases.</div></div>
+      <div class="hb-card"><div class="hb-card-icon">💓</div><div class="hb-card-title">Cardiovascular Benefits</div><div class="hb-card-text">Some studies suggest that consuming virgin coconut oil in moderation may help reduce oxidative stress, inflammation, and maintain a healthier ratio between HDL and LDL cholesterol. Moderation is key.</div></div>
+    </div>
+    <div id="tab-immune" class="hb-panel">
+      <div class="hb-card"><div class="hb-card-icon">🌟</div><div class="hb-card-title">Natural Immune Booster</div><div class="hb-card-text">The lauric acid in coconut oil is highly effective against bacteria, fungi, and viruses, making it a powerful natural antimicrobial agent. It helps combat harmful pathogens, reducing the risk of infections.</div></div>
+      <div class="hb-card"><div class="hb-card-icon">🦠</div><div class="hb-card-title">Helps Fight Infections</div><div class="hb-card-text">Regular consumption of coconut oil may strengthen the body's ability to fight infections and inflammation. Whether applied topically or consumed internally, its antibacterial and antifungal properties provide extra protection.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- HAIR BENEFITS -->
+<section id="hairbenefits">
+  <div class="hair-wrap">
+    <div class="sec-eye reveal">For Your Hair</div>
+    <h2 class="reveal d1">Coconut Oil for <em>Hair</em></h2>
+    <p class="section-intro reveal d2">Virgin coconut oil has been used for centuries as a natural remedy for hair care. Its unique composition of fatty acids, antioxidants, and essential nutrients makes it a powerful solution for maintaining healthy, shiny, and strong hair.</p>
+    <div class="hair-grid">
+      <div class="hair-card reveal"><div class="hair-icon">💧</div><div class="hair-title">Deep Conditioning &amp; Moisture</div><div class="hair-text">Coconut oil penetrates deep into the hair shaft, preventing protein loss and keeping hair hydrated. Unlike commercial conditioners, it nourishes hair from within, making it softer, shinier, and more manageable.</div></div>
+      <div class="hair-card reveal d1"><div class="hair-icon">💪</div><div class="hair-title">Strengthens &amp; Reduces Breakage</div><div class="hair-text">Rich in lauric acid, coconut oil strengthens hair strands, preventing breakage and split ends. Regular application reinforces the hair's natural protein structure, reducing hair fall and improving resilience.</div></div>
+      <div class="hair-card reveal d2"><div class="hair-icon">🌱</div><div class="hair-title">Stimulates Hair Growth</div><div class="hair-text">Massaging the scalp with coconut oil improves blood circulation, promoting healthy hair growth. Essential nutrients help strengthen hair follicles, encouraging the growth of thick and luscious locks.</div></div>
+      <div class="hair-card reveal d3"><div class="hair-icon">❄️</div><div class="hair-title">Fights Dandruff &amp; Soothes Scalp</div><div class="hair-text">Natural antifungal and antimicrobial properties help combat dandruff, scalp irritation, and dryness. Applying warm coconut oil to the scalp soothes itching and inflammation while keeping it moisturized.</div></div>
+      <div class="hair-card reveal"><div class="hair-icon">🛡️</div><div class="hair-title">Protects Against Damage</div><div class="hair-text">Coconut oil forms a protective barrier around hair strands, reducing damage caused by UV rays, heat tools, and environmental pollutants. Ideal for those who frequently style their hair.</div></div>
+      <div class="hair-card reveal d1"><div class="hair-icon">✨</div><div class="hair-title">Prevents Premature Graying</div><div class="hair-text">The antioxidants in coconut oil help combat free radical damage, which may delay the onset of gray hair when combined with a nutrient-rich diet and regular scalp massage.</div></div>
+    </div>
+    <div class="hair-howto reveal">
+      <div class="hair-howto-title">How to Use for Hair Care</div>
+      <div class="hair-tips">
+        <div class="hair-tip"><div class="hair-tip-dot">✦</div><div class="hair-tip-text"><strong style="color:var(--cream)">Deep Conditioner:</strong> Warm a few tablespoons and apply from roots to tips. Leave for at least 30 minutes before rinsing with a mild shampoo.</div></div>
+        <div class="hair-tip"><div class="hair-tip-dot">✦</div><div class="hair-tip-text"><strong style="color:var(--cream)">Scalp Massage:</strong> Gently massage onto the scalp in circular motions to improve blood flow and strengthen hair roots.</div></div>
+        <div class="hair-tip"><div class="hair-tip-dot">✦</div><div class="hair-tip-text"><strong style="color:var(--cream)">Pre-Wash Treatment:</strong> Apply 1–2 hours before shampooing to protect hair from moisture loss during washing.</div></div>
+        <div class="hair-tip"><div class="hair-tip-dot">✦</div><div class="hair-tip-text"><strong style="color:var(--cream)">Tame Frizz:</strong> Rub a small amount between your palms and apply lightly to frizzy or dry ends for added smoothness.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKIN BENEFITS -->
+<section id="skinbenefits">
+  <div class="skin-wrap">
+    <div class="sec-eye reveal">For Your Skin</div>
+    <h2 class="reveal d1">Coconut Oil for <em>Skin</em></h2>
+    <p class="section-intro reveal d2">Virgin coconut oil is packed with essential fatty acids like lauric acid, which deeply moisturize the skin. It locks in moisture, heals, and brings a natural glow — a perfect alternative to chemical-laden moisturizers.</p>
+    <div class="skin-grid">
+      <div class="skin-card reveal"><div class="skin-icon">💧</div><div class="skin-title">Hydration</div><div class="skin-text">Forms a protective barrier that locks in moisture, preventing dryness throughout the day. Excellent for dry and sensitive skin types.</div></div>
+      <div class="skin-card reveal d1"><div class="skin-icon">🩹</div><div class="skin-title">Healing</div><div class="skin-text">Anti-inflammatory properties calm irritated or inflamed skin. Antibacterial properties support healing of minor cuts, scrapes, and burns.</div></div>
+      <div class="skin-card reveal d2"><div class="skin-icon">✨</div><div class="skin-title">Natural Glow</div><div class="skin-text">Rich in antioxidants like vitamin E, it fights free radicals, minimizes wrinkles and dark spots, and restores natural skin radiance.</div></div>
+      <div class="skin-card reveal d3"><div class="skin-icon">🧴</div><div class="skin-title">Makeup Remover</div><div class="skin-text">Gently removes makeup including waterproof formulas without irritation. Hydrates while cleansing, maintaining the skin's healthy moisture balance.</div></div>
+    </div>
+    <div class="skin-extra">
+      <div class="skin-mini reveal"><div class="skin-mini-title">Treats Eczema &amp; Psoriasis</div><div class="skin-mini-text">Applying virgin coconut oil can lower the severity of these skin conditions naturally.</div></div>
+      <div class="skin-mini reveal d1"><div class="skin-mini-title">Antibacterial Effect</div><div class="skin-mini-text">Monolaurin — an active ingredient — is a strong antibacterial, antiviral and antifungal agent that guards against harmful bacteria causing pimples.</div></div>
+      <div class="skin-mini reveal d2"><div class="skin-mini-title">Heals Burns &amp; Wounds</div><div class="skin-mini-text">Powerful antibacterial and anti-inflammatory properties help accelerate wound healing and aid recovery from minor burns.</div></div>
+      <div class="skin-mini reveal d3"><div class="skin-mini-title">Shields UV Radiation</div><div class="skin-mini-text">Studies suggest routine usage guards against the dangerous effects of UV rays on skin with regular application.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- BABY & COOKING -->
+<section id="babyandcooking">
+  <div class="bc-wrap">
+    <div class="sec-eye reveal">Everyday Essentials</div>
+    <h2 class="reveal d1">For <em>Baby</em> &amp; Your <em>Kitchen</em></h2>
+    <div class="bc-grid">
+      <div class="bc-card reveal">
+        <div class="bc-card-icon">👶</div>
+        <div class="bc-card-title">Coconut Oil for <em>Babies</em></div>
+        <div class="bc-list">
+          <div class="bc-item"><div class="bc-item-text">Safe for massaging and moisturizing delicate baby skin — nature's gentlest care for your little one.</div></div>
+          <div class="bc-item"><div class="bc-item-text">Helps prevent diaper rashes and cradle cap with its natural antifungal properties.</div></div>
+          <div class="bc-item"><div class="bc-item-text">Calming and soothing for baby massage, promoting better sleep and bonding.</div></div>
+          <div class="bc-item"><div class="bc-item-text">Use sparingly in baby food only after consulting a pediatrician.</div></div>
+          <div class="bc-item"><div class="bc-item-text">Free from harsh chemicals — safe even for newborn skin.</div></div>
+        </div>
+      </div>
+      <div class="bc-card reveal d1">
+        <div class="bc-card-icon">🍳</div>
+        <div class="bc-card-title">Benefits of <em>Cooking</em> with Coconut Oil</div>
+        <div class="bc-list">
+          <div class="bc-item"><div class="bc-item-text">Enhances food flavour and adds a rich, authentic coconut texture to dishes.</div></div>
+          <div class="bc-item"><div class="bc-item-text">Ideal for frying and baking due to its high smoke point — stays stable at high temperatures.</div></div>
+          <div class="bc-item"><div class="bc-item-text">Supports healthy digestion and better absorption of fat-soluble nutrients.</div></div>
+          <div class="bc-item"><div class="bc-item-text">Replace butter or other oils in baking for a subtle coconut flavour and added moisture.</div></div>
+          <div class="bc-item"><div class="bc-item-text">MCTs provide immediate energy, making it a great addition to pre-workout meals.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NUTRIENTS & TYPES -->
+<section id="nutrients">
+  <div class="nt-wrap">
+    <div class="sec-eye reveal">Know Your Oil</div>
+    <h2 class="reveal d1">Key Nutrients &amp; <em>Oil Types</em></h2>
+    <div class="nt-grid">
+      <div>
+        <p style="color:var(--gold);font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:1.5rem" class="reveal">Key Nutrients in Virgin Coconut Oil</p>
+        <div class="nutrient-cards">
+          <div class="nutrient-card reveal"><div class="nutrient-name">Lauric Acid</div><div class="nutrient-desc">Supports immunity and metabolism. Converted to monolaurin — a powerful antiviral and antibacterial compound.</div></div>
+          <div class="nutrient-card reveal d1"><div class="nutrient-name">Caprylic Acid</div><div class="nutrient-desc">Has strong antimicrobial and antifungal properties. Helps fight harmful bacteria and yeast in the body.</div></div>
+          <div class="nutrient-card reveal d2"><div class="nutrient-name">Vitamins E &amp; K</div><div class="nutrient-desc">Essential for skin and hair health. Vitamin E acts as a powerful antioxidant protecting cells from damage.</div></div>
+          <div class="nutrient-card reveal d3"><div class="nutrient-name">Antioxidants</div><div class="nutrient-desc">Help combat free radicals and oxidative stress, reducing signs of ageing and supporting cellular health.</div></div>
+        </div>
+      </div>
+      <div class="reveal d1">
+        <p style="color:var(--gold);font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:1.5rem">Types of Coconut Oil Compared</p>
+        <div class="types-table-wrap">
+          <table class="types-table">
+            <thead>
+              <tr><th>Type</th><th>Process</th><th>Nutritional Value</th><th>Best For</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Virgin Coconut Oil</td><td>Cold-pressed from fresh coconut meat</td><td>Rich in lauric acid, antioxidants &amp; nutrients</td><td>Skincare, haircare, cooking, wellness</td></tr>
+              <tr><td>Refined Coconut Oil</td><td>Made from dried copra, refined with high heat &amp; chemicals</td><td>Lower nutrient profile due to refining</td><td>Cooking at high temperatures, baking</td></tr>
+              <tr><td>Cold-Pressed Oil</td><td>Extracted without heat — can be refined or unrefined</td><td>Retains nutrients better than refined oil</td><td>Cooking, skincare, haircare</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MYTHS -->
+<section id="myths">
+  <div class="myths-wrap">
+    <div class="sec-eye center reveal">Busting Myths</div>
+    <h2 style="text-align:center" class="reveal d1">Common <em>Misconceptions</em></h2>
+    <p class="section-intro reveal d2" style="text-align:center;margin:0 auto 0">In the world of health and wellness, coconut oil often finds itself at the centre of various debates. Here are the facts.</p>
+    <div class="myth-list">
+      <div class="myth-card">
+        <div class="myth-header">
+          <div class="myth-label"><span class="myth-tag">Myth 1</span><span class="myth-q">Coconut oil is unhealthy because it is high in saturated fat</span></div>
+          <div class="myth-toggle"><svg width="12" height="12" fill="none" viewBox="0 0 12 12"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+        </div>
+        <div class="myth-body"><div class="myth-inner"><div class="myth-fact-tag">Fact</div><div class="myth-fact-text">While coconut oil contains saturated fat, it is primarily composed of medium-chain triglycerides (MCTs) that are metabolized differently than long-chain fats found in animal products. In moderation, it can be a healthy addition to your diet.</div></div></div>
+      </div>
+      <div class="myth-card">
+        <div class="myth-header">
+          <div class="myth-label"><span class="myth-tag">Myth 2</span><span class="myth-q">Virgin coconut oil is the same as regular coconut oil</span></div>
+          <div class="myth-toggle"><svg width="12" height="12" fill="none" viewBox="0 0 12 12"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+        </div>
+        <div class="myth-body"><div class="myth-inner"><div class="myth-fact-tag">Fact</div><div class="myth-fact-text">Virgin coconut oil is extracted from fresh coconut meat without heat or chemicals, preserving its nutrients and flavour. Regular coconut oil may be refined and lack these benefits entirely.</div></div></div>
+      </div>
+      <div class="myth-card">
+        <div class="myth-header">
+          <div class="myth-label"><span class="myth-tag">Myth 3</span><span class="myth-q">Coconut oil causes weight gain</span></div>
+          <div class="myth-toggle"><svg width="12" height="12" fill="none" viewBox="0 0 12 12"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+        </div>
+        <div class="myth-body"><div class="myth-inner"><div class="myth-fact-tag">Fact</div><div class="myth-fact-text">When consumed in moderation, coconut oil can actually support metabolism and energy levels. Like any calorie-dense food, overconsumption may lead to weight gain — but moderate use supports a healthy lifestyle.</div></div></div>
+      </div>
+      <div class="myth-card">
+        <div class="myth-header">
+          <div class="myth-label"><span class="myth-tag">Myth 4</span><span class="myth-q">Coconut oil is only good for cooking</span></div>
+          <div class="myth-toggle"><svg width="12" height="12" fill="none" viewBox="0 0 12 12"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+        </div>
+        <div class="myth-body"><div class="myth-inner"><div class="myth-fact-tag">Fact</div><div class="myth-fact-text">Beyond the kitchen, coconut oil has numerous applications in skincare, haircare, baby care, and even oral health through oil pulling — making it a truly versatile product in your wellness routine.</div></div></div>
+      </div>
+      <div class="myth-card">
+        <div class="myth-header">
+          <div class="myth-label"><span class="myth-tag">Myth 5</span><span class="myth-q">All coconut oil is the same</span></div>
+          <div class="myth-toggle"><svg width="12" height="12" fill="none" viewBox="0 0 12 12"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+        </div>
+        <div class="myth-body"><div class="myth-inner"><div class="myth-fact-tag">Fact</div><div class="myth-fact-text">There are various types of coconut oil — virgin, refined, and hydrogenated — each with different properties and uses. Virgin coconut oil is the gold standard, preserving maximum nutrients and natural benefits.</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COCONUT MILK -->
+<section id="coconutmilk">
+  <div class="milk-wrap">
+    <div class="sec-eye reveal">Beyond the Oil</div>
+    <h2 class="reveal d1">Benefits of <em>Coconut Milk</em></h2>
+    <p class="section-intro reveal d2">Coconut milk has become widely popular as a healthy, tasty alternative to cow's milk. Extracted from the white flesh of mature coconuts, it is loaded with lauric acid, MCTs, and essential vitamins — C, E, B1, B3, folate, iron, magnesium, copper, selenium, potassium, and manganese.</p>
+    <div class="milk-grid">
+      <div class="milk-card reveal"><div class="milk-icon">🧠</div><div class="milk-title">Helps Manage Alzheimer's Disease</div><div class="milk-text">Coconut milk is a good source of MCTs that are readily converted to ketones by the liver. Ketones serve as an alternative energy source for the brain and can be helpful for Alzheimer's patients.</div></div>
+      <div class="milk-card reveal d1"><div class="milk-icon">🦠</div><div class="milk-title">Combats Infection</div><div class="milk-text">Studies have proven that coconut milk has amazing abilities to reduce inflammation and fight pathogens, thanks to its anti-inflammatory, antibacterial, antiviral, and antifungal characteristics.</div></div>
+      <div class="milk-card reveal d2"><div class="milk-icon">🩺</div><div class="milk-title">Helps Heal Ulcers</div><div class="milk-text">Anti-ulcer and antibacterial properties in coconut milk fight bacteria causing ulcers. Drinking coconut milk regularly can help ease inflammation and promote healing of stomach ulcers.</div></div>
+      <div class="milk-card reveal d3"><div class="milk-icon">💪</div><div class="milk-title">Rich in Nutrients</div><div class="milk-text">93% of its calories come from MCTs. Packed with essential vitamins and minerals that support energy, bone health, immune function, and overall vitality.</div></div>
+      <div class="milk-card reveal"><div class="milk-icon">❤️</div><div class="milk-title">Heart Health Support</div><div class="milk-text">The MCTs in coconut milk support healthy cholesterol levels. Lauric acid helps increase HDL (good) cholesterol, contributing to a healthier cardiovascular profile.</div></div>
+      <div class="milk-card reveal d1"><div class="milk-icon">🌱</div><div class="milk-title">Dairy-Free Alternative</div><div class="milk-text">A perfect lactose-free, plant-based alternative for those with dairy intolerance. Rich, creamy, and delicious in curries, smoothies, desserts, and beverages.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- VISION & MISSION -->
 <section id="vision">
   <div class="vm-wrap">
     <div class="sec-eye reveal">Our Purpose</div>
@@ -637,74 +810,24 @@ footer { background: #1c1c1a; border-top: 1px solid rgba(201,168,76,0.1); paddin
   </div>
 </section>
 
-<!-- ══ FAQ ══ -->
+<!-- FAQ -->
 <section id="faq">
   <div class="faq-wrap">
     <div class="sec-eye center reveal">Have Questions?</div>
     <h2 style="text-align:center" class="reveal d1">Frequently Asked <em>Questions</em></h2>
     <div class="faq-list">
-
-      <div class="faq-item">
-        <div class="faq-q">
-          <span class="faq-q-text">What is fermented virgin coconut oil and how is it different?</span>
-          <span class="faq-icon"><svg width="12" height="12" fill="none" viewBox="0 0 12 12"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></span>
-        </div>
-        <div class="faq-a"><div class="faq-a-inner">Fermented virgin coconut oil is made by extracting fresh coconut milk and allowing it to naturally ferment and separate over 24 to 48 hours at room temperature — no heat, no chemicals. This cold-process method retains maximum natural nutrients, lauric acid, and antioxidants, making it far superior to commercially refined coconut oil which is bleached, deodorised, and processed at high heat.</div></div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-q">
-          <span class="faq-q-text">Is ATHRA NATURALS coconut oil safe for cooking?</span>
-          <span class="faq-icon"><svg width="12" height="12" fill="none" viewBox="0 0 12 12"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></span>
-        </div>
-        <div class="faq-a"><div class="faq-a-inner">Yes, absolutely. Our fermented virgin coconut oil has a natural, mild coconut aroma and is perfect for cooking, sauteing, and baking. It has a moderate smoke point suitable for everyday Indian cooking. Many customers also use it as a finishing oil for salads and smoothies.</div></div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-q">
-          <span class="faq-q-text">How should I use it for hair and skin?</span>
-          <span class="faq-icon"><svg width="12" height="12" fill="none" viewBox="0 0 12 12"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></span>
-        </div>
-        <div class="faq-a"><div class="faq-a-inner">For hair: warm a small amount between your palms and massage into the scalp and lengths. Leave for 30 minutes or overnight before washing. For skin: apply a thin layer directly as a moisturiser, massage oil, or makeup remover. Its high lauric acid content gives it natural antibacterial properties, making it ideal for sensitive skin too.</div></div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-q">
-          <span class="faq-q-text">Why does the oil sometimes solidify?</span>
-          <span class="faq-icon"><svg width="12" height="12" fill="none" viewBox="0 0 12 12"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></span>
-        </div>
-        <div class="faq-a"><div class="faq-a-inner">This is completely natural and actually a sign of high purity! Virgin coconut oil solidifies below 24 degrees C and melts above it. During cooler months it may turn white and solid — this does not affect quality at all. Simply place the bottle in warm water or hold it in your hands to liquefy it.</div></div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-q">
-          <span class="faq-q-text">What is the shelf life and how should I store it?</span>
-          <span class="faq-icon"><svg width="12" height="12" fill="none" viewBox="0 0 12 12"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></span>
-        </div>
-        <div class="faq-a"><div class="faq-a-inner">Our coconut oil has a shelf life of 18 to 24 months when stored in a cool, dry place away from direct sunlight. The natural antioxidants in cold-processed oil help extend its life without artificial preservatives. Always use a clean, dry spoon to avoid moisture contamination.</div></div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-q">
-          <span class="faq-q-text">How can I place an order?</span>
-          <span class="faq-icon"><svg width="12" height="12" fill="none" viewBox="0 0 12 12"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></span>
-        </div>
-        <div class="faq-a"><div class="faq-a-inner">Simply click any Order on WhatsApp button on this page to connect with us directly. Tell us your preferred size (100ml, 250ml, 500ml, or 1000ml) and delivery address. We deliver across India. You can also email athranaturals@gmail.com or visit athranaturals.co.in.</div></div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-q">
-          <span class="faq-q-text">Do you offer bulk or wholesale orders?</span>
-          <span class="faq-icon"><svg width="12" height="12" fill="none" viewBox="0 0 12 12"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></span>
-        </div>
-        <div class="faq-a"><div class="faq-a-inner">Yes! We welcome bulk orders for families, wellness practitioners, yoga studios, restaurants, and retailers. Contact us on WhatsApp or at athranaturals@gmail.com with your requirements for special pricing. We also offer festival gift hampers and corporate gifting packages.</div></div>
-      </div>
-
+      <div class="faq-item"><div class="faq-q"><span class="faq-q-text">What is fermented virgin coconut oil and how is it different?</span><span class="faq-icon"><svg width="12" height="12" fill="none" viewBox="0 0 12 12"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">Fermented virgin coconut oil is made by extracting fresh coconut milk and allowing it to naturally ferment and separate over 24 to 48 hours at room temperature — no heat, no chemicals. This cold-process method retains maximum natural nutrients, lauric acid, and antioxidants, making it far superior to commercially refined coconut oil.</div></div></div>
+      <div class="faq-item"><div class="faq-q"><span class="faq-q-text">Is ATHRA NATURALS coconut oil safe for cooking?</span><span class="faq-icon"><svg width="12" height="12" fill="none" viewBox="0 0 12 12"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">Yes, absolutely. Our fermented virgin coconut oil has a natural, mild coconut aroma and is perfect for cooking, sauteing, and baking. It has a moderate smoke point suitable for everyday Indian cooking. Many customers also use it as a finishing oil for salads and smoothies.</div></div></div>
+      <div class="faq-item"><div class="faq-q"><span class="faq-q-text">How should I use it for hair and skin?</span><span class="faq-icon"><svg width="12" height="12" fill="none" viewBox="0 0 12 12"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">For hair: warm a small amount and massage into the scalp and lengths. Leave for 30 minutes or overnight before washing. For skin: apply a thin layer directly as a moisturiser, massage oil, or makeup remover. Its high lauric acid content gives it natural antibacterial properties, ideal for sensitive skin too.</div></div></div>
+      <div class="faq-item"><div class="faq-q"><span class="faq-q-text">Why does the oil sometimes solidify?</span><span class="faq-icon"><svg width="12" height="12" fill="none" viewBox="0 0 12 12"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">This is completely natural and a sign of high purity! Virgin coconut oil solidifies below 24 degrees C and melts above it. During cooler months it may turn white and solid — this does not affect quality at all. Simply place the bottle in warm water to liquefy it.</div></div></div>
+      <div class="faq-item"><div class="faq-q"><span class="faq-q-text">What is the shelf life and how should I store it?</span><span class="faq-icon"><svg width="12" height="12" fill="none" viewBox="0 0 12 12"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">Our coconut oil has a shelf life of 18 to 24 months when stored in a cool, dry place away from direct sunlight. Always use a clean, dry spoon to avoid moisture contamination and extend its natural life.</div></div></div>
+      <div class="faq-item"><div class="faq-q"><span class="faq-q-text">How can I place an order?</span><span class="faq-icon"><svg width="12" height="12" fill="none" viewBox="0 0 12 12"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">Simply click any Order on WhatsApp button on this page. Tell us your preferred size (100ml, 250ml, 500ml, or 1000ml) and delivery address. We deliver across India. You can also email athranaturals@gmail.com or visit athranaturals.co.in.</div></div></div>
+      <div class="faq-item"><div class="faq-q"><span class="faq-q-text">Do you offer bulk or wholesale orders?</span><span class="faq-icon"><svg width="12" height="12" fill="none" viewBox="0 0 12 12"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></span></div><div class="faq-a"><div class="faq-a-inner">Yes! We welcome bulk orders for families, wellness practitioners, yoga studios, restaurants, and retailers. Contact us on WhatsApp or at athranaturals@gmail.com. We also offer festival gift hampers and corporate gifting packages.</div></div></div>
     </div>
   </div>
 </section>
 
-<!-- ══ OFFERS ══ -->
+<!-- OFFERS -->
 <section id="offers">
   <div class="offers-wrap">
     <div class="offers-dots"></div>
@@ -720,13 +843,11 @@ footer { background: #1c1c1a; border-top: 1px solid rgba(201,168,76,0.1); paddin
   </div>
 </section>
 
-<!-- ══ FOOTER ══ -->
+<!-- FOOTER -->
 <footer>
   <div class="foot-grid">
     <div>
-      <div class="foot-logo">
-        <img src="logo.jpg" alt="Athra Naturals Logo">
-      </div>
+      <div class="foot-logo"><img src="logo.jpg" alt="Athra Naturals Logo"></div>
       <div class="foot-brand-name">ATHRA <span>NATURALS</span></div>
       <p class="foot-p">Premium fermented virgin coconut oil, crafted with ancient wisdom and modern purity standards. From nature, for you.</p>
     </div>
@@ -736,7 +857,12 @@ footer { background: #1c1c1a; border-top: 1px solid rgba(201,168,76,0.1); paddin
         <li><a href="#hero">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#shop">Shop</a></li>
-        <li><a href="#offers">Offers</a></li>
+        <li><a href="#howto">How to Use</a></li>
+        <li><a href="#healthbenefits">Health Benefits</a></li>
+        <li><a href="#hairbenefits">Hair Benefits</a></li>
+        <li><a href="#skinbenefits">Skin Benefits</a></li>
+        <li><a href="#myths">Myths</a></li>
+        <li><a href="#coconutmilk">Coconut Milk</a></li>
         <li><a href="#vision">Vision</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
@@ -756,12 +882,8 @@ footer { background: #1c1c1a; border-top: 1px solid rgba(201,168,76,0.1); paddin
         <div class="c-txt"><a href="https://athranaturals.co.in" target="_blank">athranaturals.co.in</a></div>
       </div>
       <div class="socials">
-        <a class="s-link" href="https://instagram.com/athra_naturals" target="_blank" aria-label="Instagram">
-          <svg width="15" height="15" fill="none" viewBox="0 0 15 15"><rect x="2" y="2" width="11" height="11" rx="3" stroke="currentColor" stroke-width="1.1"/><circle cx="7.5" cy="7.5" r="2.5" stroke="currentColor" stroke-width="1.1"/><circle cx="11" cy="4" r=".7" fill="currentColor"/></svg>
-        </a>
-        <a class="s-link" href="https://wa.me/918754121458" target="_blank" aria-label="WhatsApp">
-          <svg width="15" height="15" fill="none" viewBox="0 0 15 15"><circle cx="7.5" cy="7.5" r="5.5" stroke="currentColor" stroke-width="1.1"/><path d="M5 5.5c.5 1 1.5 3 4.5 4.5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>
-        </a>
+        <a class="s-link" href="https://instagram.com/athra_naturals" target="_blank" aria-label="Instagram"><svg width="15" height="15" fill="none" viewBox="0 0 15 15"><rect x="2" y="2" width="11" height="11" rx="3" stroke="currentColor" stroke-width="1.1"/><circle cx="7.5" cy="7.5" r="2.5" stroke="currentColor" stroke-width="1.1"/><circle cx="11" cy="4" r=".7" fill="currentColor"/></svg></a>
+        <a class="s-link" href="https://wa.me/918754121458" target="_blank" aria-label="WhatsApp"><svg width="15" height="15" fill="none" viewBox="0 0 15 15"><circle cx="7.5" cy="7.5" r="5.5" stroke="currentColor" stroke-width="1.1"/><path d="M5 5.5c.5 1 1.5 3 4.5 4.5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg></a>
       </div>
     </div>
   </div>
@@ -775,14 +897,10 @@ footer { background: #1c1c1a; border-top: 1px solid rgba(201,168,76,0.1); paddin
 // Navbar scroll
 var nav = document.getElementById('nav');
 window.addEventListener('scroll', function() {
-  if (window.scrollY > 50) {
-    nav.classList.add('solid');
-  } else {
-    nav.classList.remove('solid');
-  }
+  nav.classList.toggle('solid', window.scrollY > 50);
 });
 
-// Mobile menu open/close
+// Mobile menu
 document.getElementById('hbg').addEventListener('click', function() {
   document.getElementById('mob').classList.add('on');
   document.body.style.overflow = 'hidden';
@@ -800,38 +918,43 @@ document.querySelectorAll('.mob-link').forEach(function(link) {
 
 // Scroll reveal
 var observer = new IntersectionObserver(function(entries) {
-  entries.forEach(function(entry) {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
-    }
-  });
-}, { threshold: 0.12 });
-document.querySelectorAll('.reveal').forEach(function(el) {
-  observer.observe(el);
-});
+  entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('show'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(function(el) { observer.observe(el); });
 
 // Ticker
-var words = ['100% Pure','Traditionally Fermented','Chemical Free','Cold Process','Hair & Skin Benefits','Virgin Coconut Oil','ATHRA NATURALS','No Additives','Handcrafted','Lauric Acid Rich'];
+var words = ['100% Pure','Traditionally Fermented','Chemical Free','Cold Process','Hair & Skin Benefits','Baby Safe','Virgin Coconut Oil','ATHRA NATURALS','No Additives','Handcrafted','Lauric Acid Rich','Oil Pulling','Ayurvedic Wisdom'];
 var ticker = document.getElementById('ticker');
 var all = words.concat(words).concat(words).concat(words);
-ticker.innerHTML = all.map(function(w) {
-  return '<span class="ticker-item"><span class="ticker-dot">&#10038;</span>' + w + '</span>';
-}).join('');
+ticker.innerHTML = all.map(function(w) { return '<span class="ticker-item"><span class="ticker-dot">&#10038;</span>' + w + '</span>'; }).join('');
 
 // FAQ accordion
 document.querySelectorAll('.faq-q').forEach(function(q) {
   q.addEventListener('click', function() {
     var item = q.parentElement;
     var isOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq-item.open').forEach(function(i) {
-      i.classList.remove('open');
-    });
-    if (!isOpen) {
-      item.classList.add('open');
-    }
+    document.querySelectorAll('.faq-item.open').forEach(function(i) { i.classList.remove('open'); });
+    if (!isOpen) item.classList.add('open');
   });
 });
-</script>
 
+// Myths accordion
+document.querySelectorAll('.myth-header').forEach(function(h) {
+  h.addEventListener('click', function() {
+    var card = h.parentElement;
+    var isOpen = card.classList.contains('open');
+    document.querySelectorAll('.myth-card.open').forEach(function(c) { c.classList.remove('open'); });
+    if (!isOpen) card.classList.add('open');
+  });
+});
+
+// Health benefits tabs
+function showTab(id) {
+  document.querySelectorAll('.hb-panel').forEach(function(p) { p.classList.remove('active'); });
+  document.querySelectorAll('.hb-tab').forEach(function(t) { t.classList.remove('active'); });
+  document.getElementById('tab-' + id).classList.add('active');
+  event.target.classList.add('active');
+}
+</script>
 </body>
 </html>
